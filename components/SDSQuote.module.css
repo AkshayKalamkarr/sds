@@ -1,0 +1,91 @@
+.ledgerLines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 27px,
+    rgba(28, 28, 26, 0.05) 28px
+  );
+}
+
+.cornerMark {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-color: #1c1c1a;
+  opacity: 0.35;
+}
+.cornerTl { top: 20px; left: 20px; border-top: 1px solid; border-left: 1px solid; }
+.cornerTr { top: 20px; right: 20px; border-top: 1px solid; border-right: 1px solid; }
+.cornerBl { bottom: 20px; left: 20px; border-bottom: 1px solid; border-left: 1px solid; }
+.cornerBr { bottom: 20px; right: 20px; border-bottom: 1px solid; border-right: 1px solid; }
+
+.quoteMark {
+  font-family: var(--font-body), Georgia, serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: #1c1c1a;
+  opacity: 0.15;
+}
+
+.quoteText { font-family: var(--font-body), Georgia, serif; }
+.monoLabel { font-family: var(--font-mono), 'Courier New', monospace; }
+.eyebrow { color: #1c1c1a; opacity: 0.55; }
+
+.ledgerList {
+  display: flex;
+  flex-direction: column;
+}
+
+.ledgerRow {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(28, 28, 26, 0.1);
+}
+.ledgerRow:first-child {
+  border-top: 1px solid rgba(28, 28, 26, 0.1);
+}
+
+.ledgerIndex {
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: rgba(28, 28, 26, 0.4);
+  min-width: 22px;
+}
+
+.ledgerName {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  color: #1c1c1a;
+}
+
+.fadeIn1, .fadeIn2, .fadeIn3 {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: rise 0.8s ease-out forwards;
+}
+.fadeIn1 { animation-delay: 0.05s; }
+.fadeIn2 { animation-delay: 0.45s; }
+.fadeIn3 { animation-delay: 0.85s; }
+
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stampSpin {
+  animation: spin-slow 40s linear infinite;
+}
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fadeIn1, .fadeIn2, .fadeIn3, .stampSpin {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

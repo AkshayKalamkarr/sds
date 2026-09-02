@@ -1,0 +1,50 @@
+.monoLabel {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+.contactRow {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  color: inherit;
+}
+.contactRow:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contactIndex {
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.35);
+  min-width: 20px;
+}
+
+.contactLabel {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  min-width: 72px;
+}
+
+.contactValue {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  flex: 1;
+}
+
+.contactArrow {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.contactRowLink:hover .contactArrow {
+  transform: translateX(3px);
+  color: #ffffff;
+}
+.contactRowLink:hover .contactValue {
+  color: #ffffff;
+}
