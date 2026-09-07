@@ -235,7 +235,7 @@ const CareerPage = () => {
             transition={{ duration: 0.6 }}
             className="font-mono text-[#E8A33D] text-xs sm:text-sm tracking-[0.3em] mb-5"
           >
-            SUPREME INFRASTRUCTURE&nbsp;&nbsp;/&nbsp;&nbsp;CAREERS
+            SDS BHARAT INFRATECH PVT LTD&nbsp;&nbsp;/&nbsp;&nbsp;CAREERS
           </motion.p>
 
           <motion.h1
@@ -255,7 +255,7 @@ const CareerPage = () => {
             transition={{ delay: 0.35, duration: 0.7 }}
             className="font-body text-[#C7CCD2] text-base sm:text-lg mt-6 max-w-xl"
           >
-            With agility, capacity, range, and ambition, Supreme's crew
+            With agility, capacity, range, and ambition, sds's crew
             plays on some big stages — on and off the clock.
           </motion.p>
         </div>

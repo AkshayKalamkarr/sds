@@ -231,7 +231,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="font-mono text-[#E8A33D] text-xs sm:text-sm tracking-[0.3em] mb-5"
           >
-            SUPREME INFRASTRUCTURE&nbsp;&nbsp;/&nbsp;&nbsp;CONTACT SHEET
+            SDS BHARAT INFRATECH PVT LTD&nbsp;&nbsp;/&nbsp;&nbsp;CONTACT SHEET
           </motion.p>
 
           <motion.h1
@@ -280,7 +280,7 @@ export default function Contact() {
               {
                 Icon: FaEnvelope,
                 label: "EMAIL",
-                value: "contact@supremeinfrastructure.in",
+                value: "contact@sdsbharatinfratech.com",
               },
             ].map(({ Icon, label, value }, i) => (
               <div
@@ -329,7 +329,7 @@ export default function Contact() {
                   label: "A. ADDRESS",
                   value: (
                     <>
-                      Mayuresh Planet, 603, Supreme Infrastructure Company,
+                      Mayuresh Planet, 603, SDS BHARAT INFRATECH PVT LTD,
                       Plot No. 42–43,
                       <br />
                       Opp. Navi Mumbai Civil &amp; Criminal Court,
@@ -346,7 +346,7 @@ export default function Contact() {
                 {
                   Icon: FaEnvelope,
                   label: "C. EMAIL",
-                  value: <>contact@supremeinfrastructure.in</>,
+                  value: <>contact@sdsbharatinfratech.com</>,
                 },
               ].map(({ Icon, label, value }, i) => (
                 <div key={i} className="flex gap-4">
@@ -578,7 +578,7 @@ export default function Contact() {
       <div className="bg-[#1B1F23] py-10">
         <div className="container mx-auto px-6 flex items-center gap-4">
           <span className="font-mono text-[10px] tracking-[0.2em] text-[#7C8591]">
-            SUPREME INFRASTRUCTURE CO.
+           SDS BHARAT INFRATECH PVT LTD
           </span>
           <div className="flex-1 dim-line h-px" />
           <span className="font-mono text-[10px] tracking-[0.2em] text-[#7C8591]">
