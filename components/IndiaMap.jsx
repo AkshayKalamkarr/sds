@@ -414,6 +414,7 @@ export default function IndiaMap() {
       />
 
       <div className={styles.container}>
+
         {/* =====================================================
             HEADER
         ===================================================== */}
@@ -463,9 +464,8 @@ export default function IndiaMap() {
 
               /public/images/home/india-map.png
 
-              We intentionally use <img> instead of next/image
-              here so the local public image works without
-              width/height or image-loader configuration.
+              Using a normal <img> here avoids the Next.js
+              next/image width/height requirement.
             */}
 
             <img
@@ -621,7 +621,10 @@ export default function IndiaMap() {
                         type="button"
                         className={styles.viewProjects}
                       >
-                        <span>VIEW ALL PROJECTS</span>
+                        <span>
+                          VIEW ALL PROJECTS
+                        </span>
+
                         <span aria-hidden="true">
                           ↗
                         </span>

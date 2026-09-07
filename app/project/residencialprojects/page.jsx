@@ -345,7 +345,7 @@ const ResidencialProject = () => {
               {filteredProjects.length > 0 ? (
                 filteredProjects.map((project, index) => (
                   <motion.div
-                    key={project.id}
+                    key={project.slug}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -20 }}

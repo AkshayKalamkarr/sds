@@ -195,7 +195,7 @@ export const projects = [
       { image: "/images/projects/CARNACBUNDER2B/carnac-6.jpeg", alt: "CARNACBUNDER2B-6" },
       { image: "/images/projects/CARNACBUNDER2B/carnac-8.jpeg", alt: "CARNACBUNDER2B-8" },
       { image: "/images/projects/CARNACBUNDER2B/carnac-9.jpeg", alt: "CARNACBUNDER2B-9" },
-      { image: "/images/projects/CARNACBUNDER2B/carnac-1.jpeg", alt: "CARNACBUNDER2B-10" },
+      { image: "/images/projects/CARNACBUNDER2B/carnac-10.jpeg", alt: "CARNACBUNDER2B-10" },
       { image: "/images/projects/CARNACBUNDER2B/carnac-11.jpeg", alt: "CARNACBUNDER2B-11" },
       { image: "/images/projects/CARNACBUNDER2B/carnac-12.jpeg", alt: "CARNACBUNDER2B-12" },
       { image: "/images/projects/CARNACBUNDER2B/carnac-13.jpeg", alt: "CARNACBUNDER2B-13" },

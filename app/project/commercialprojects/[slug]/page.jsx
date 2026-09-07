@@ -253,14 +253,12 @@ export default function ProjectPage() {
                 <div className="mb-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
                   {videos.map((video, index) => {
                     /*
-                     * IMPORTANT:
-                     * Stable key instead of key={index}
+                     * Stable key: always folds in the index so two videos
+                     * that happen to share a url/title/id can never collide.
                      */
-                    const videoKey =
-                      video?.id ||
-                      video?.url ||
-                      video?.title ||
-                      `video-${index}`;
+                    const videoKey = `video-${index}-${
+                      video?.id || video?.url || video?.title || "na"
+                    }`;
 
                     return (
                       <motion.div
@@ -306,21 +304,21 @@ export default function ProjectPage() {
               {galleryImages.length > 0 && (
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
                   {galleryImages.map((img, index) => {
-                    /*
-                     * Stable gallery key.
-                     */
-                    const imageKey =
-                      img?.id ||
-                      img?.image ||
-                      img?.src ||
-                      img?.alt ||
-                      `gallery-image-${index}`;
-
                     const imageSource = img?.image || img?.src;
 
                     if (!imageSource) {
                       return null;
                     }
+
+                    /*
+                     * Stable, collision-proof gallery key.
+                     * The index is always part of the key so a duplicated
+                     * image path/alt in the data file (e.g. a copy-paste
+                     * typo) can never produce two identical keys.
+                     */
+                    const imageKey = `gallery-image-${index}-${
+                      img?.id || imageSource
+                    }`;
 
                     return (
                       <motion.div
@@ -364,13 +362,12 @@ export default function ProjectPage() {
               <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5 lg:gap-6">
                 {highlights.map((item, index) => {
                   /*
-                   * Stable key for highlights.
+                   * Stable key for highlights — index-first so duplicate
+                   * icon/description combos can never collide.
                    */
-                  const highlightKey =
-                    item?.id ||
-                    `${item?.icon || "highlight"}-${
-                      item?.description || index
-                    }`;
+                  const highlightKey = `highlight-${index}-${
+                    item?.id || item?.icon || item?.description || "na"
+                  }`;
 
                   const Icon = item?.icon
                     ? highlightsIcon[item.icon]
@@ -441,13 +438,12 @@ export default function ProjectPage() {
                     <tbody>
                       {configuration.map((cfg, index) => {
                         /*
-                         * Stable configuration key.
+                         * Stable configuration key — index-first so a
+                         * duplicated flat/carpet combo can never collide.
                          */
-                        const configKey =
-                          cfg?.id ||
-                          `${cfg?.flat || "area"}-${
-                            cfg?.carpet || "duration"
-                          }-${index}`;
+                        const configKey = `config-${index}-${
+                          cfg?.id || cfg?.flat || "na"
+                        }-${cfg?.carpet || "na"}`;
 
                         return (
                           <tr

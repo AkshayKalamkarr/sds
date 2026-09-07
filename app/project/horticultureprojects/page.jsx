@@ -335,7 +335,7 @@ const HorticultureProject = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 py-4 sm:py-6 md:py-8">
                 {filteredProjects.length > 0 ? (
                   filteredProjects.map((project) => (
-                    <ProjectCard key={project.id} project={project} />
+                    <ProjectCard key={project.slug} project={project} />
                   ))
                 ) : (
                   debouncedSearchTerm && (

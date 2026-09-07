@@ -371,7 +371,7 @@ const CommercialProject = () => {
               <div className="grid grid-cols-1 gap-6 py-4 sm:grid-cols-2 md:py-6 lg:grid-cols-3 xl:grid-cols-4">
                 {filteredProjects.length > 0 ? (
                   filteredProjects.map((project, index) => (
-                    <ProjectCard key={project.id} project={project} index={index} />
+                    <ProjectCard key={project.slug} project={project} index={index} />
                   ))
                 ) : (
                   debouncedSearchTerm && (
