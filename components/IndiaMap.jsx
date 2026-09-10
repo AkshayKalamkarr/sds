@@ -9,6 +9,10 @@ import {
 
 import styles from "./IndiaMap.module.css";
 
+/* ============================================================
+   FONTS
+============================================================ */
+
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["500", "700"],
@@ -359,11 +363,19 @@ const PROJECT_LOCATIONS = [
 export default function IndiaMap() {
   const [activeLocation, setActiveLocation] = useState(null);
 
+  /* ============================================================
+     LOCATION CLICK
+  ============================================================ */
+
   const handleLocationClick = (location) => {
     setActiveLocation((current) =>
       current?.id === location.id ? null : location
     );
   };
+
+  /* ============================================================
+     MOUSE ENTER
+  ============================================================ */
 
   const handleMouseEnter = (location) => {
     if (
@@ -374,10 +386,18 @@ export default function IndiaMap() {
     }
   };
 
+  /* ============================================================
+     CLOSE PROJECT CARD
+  ============================================================ */
+
   const closeCard = (event) => {
     event.stopPropagation();
     setActiveLocation(null);
   };
+
+  /* ============================================================
+     RENDER
+  ============================================================ */
 
   return (
     <section
@@ -388,10 +408,18 @@ export default function IndiaMap() {
         ${styles.indiaMapSection}
       `}
     >
+      {/* ========================================================
+          DECORATIVE LEDGER LINES
+      ======================================================== */}
+
       <div
         className={styles.ledgerLines}
         aria-hidden="true"
       />
+
+      {/* ========================================================
+          CORNER MARKS
+      ======================================================== */}
 
       <span
         className={`${styles.cornerMark} ${styles.cornerTl}`}
@@ -415,11 +443,12 @@ export default function IndiaMap() {
 
       <div className={styles.container}>
 
-        {/* =====================================================
+        {/* ======================================================
             HEADER
-        ===================================================== */}
+        ====================================================== */}
 
         <div className={styles.header}>
+
           <div className={styles.headerLeft}>
             <p className={styles.eyebrow}>
               SDS BHARAT INFRATECH PVT. LTD. — NATIONAL PRESENCE
@@ -449,23 +478,26 @@ export default function IndiaMap() {
               </span>
             </div>
           </div>
+
         </div>
 
-        {/* =====================================================
+        {/* ======================================================
             MAP
-        ===================================================== */}
+        ====================================================== */}
 
         <div className={styles.mapArea}>
+
           <div className={styles.mapFrame}>
 
             {/* 
               IMPORTANT:
-              The map must exist at:
+              Place your map image here:
 
               /public/images/home/india-map.png
 
-              Using a normal <img> here avoids the Next.js
-              next/image width/height requirement.
+              We are intentionally using a normal <img>
+              instead of Next.js <Image> so that you don't
+              need to provide width/height.
             */}
 
             <img
@@ -475,11 +507,12 @@ export default function IndiaMap() {
               draggable="false"
             />
 
-            {/* =================================================
+            {/* ==================================================
                 INTERACTIVE LOCATION PINS
-            ================================================= */}
+            ================================================== */}
 
             <div className={styles.mapOverlay}>
+
               {PROJECT_LOCATIONS.map((location) => {
                 const isActive =
                   activeLocation?.id === location.id;
@@ -496,7 +529,10 @@ export default function IndiaMap() {
                       top: `${location.y}%`,
                     }}
                   >
-                    {/* PIN */}
+
+                    {/* ==================================================
+                        PIN
+                    ================================================== */}
 
                     <button
                       type="button"
@@ -526,7 +562,9 @@ export default function IndiaMap() {
                       />
                     </button>
 
-                    {/* PROJECT CARD */}
+                    {/* ==================================================
+                        PROJECT CARD
+                    ================================================== */}
 
                     <div
                       className={`
@@ -539,7 +577,13 @@ export default function IndiaMap() {
                         }
                       `}
                     >
+
+                      {/* ==================================================
+                          CARD HEADER
+                      ================================================== */}
+
                       <div className={styles.cardHeader}>
+
                         <div>
                           <span className={styles.cardNumber}>
                             {String(location.id).padStart(2, "0")}
@@ -558,17 +602,31 @@ export default function IndiaMap() {
                         >
                           ×
                         </button>
+
                       </div>
+
+                      {/* ==================================================
+                          CARD DIVIDER
+                      ================================================== */}
 
                       <div
                         className={styles.cardDivider}
                       />
 
+                      {/* ==================================================
+                          PROJECT LABEL
+                      ================================================== */}
+
                       <span className={styles.cardLabel}>
                         PROJECTS
                       </span>
 
+                      {/* ==================================================
+                          PROJECT LIST
+                      ================================================== */}
+
                       <div className={styles.projectList}>
+
                         {location.projects.map(
                           (project) => (
                             <div
@@ -577,6 +635,7 @@ export default function IndiaMap() {
                               }
                               key={project.id}
                             >
+
                               <div
                                 className={
                                   styles.projectIcon
@@ -590,6 +649,7 @@ export default function IndiaMap() {
                                   styles.projectInfo
                                 }
                               >
+
                                 <h4>
                                   {project.name}
                                 </h4>
@@ -611,11 +671,18 @@ export default function IndiaMap() {
                                 >
                                   {project.status}
                                 </span>
+
                               </div>
+
                             </div>
                           )
                         )}
+
                       </div>
+
+                      {/* ==================================================
+                          VIEW PROJECTS BUTTON
+                      ================================================== */}
 
                       <button
                         type="button"
@@ -629,24 +696,33 @@ export default function IndiaMap() {
                           ↗
                         </span>
                       </button>
+
                     </div>
+
                   </div>
                 );
               })}
+
             </div>
+
           </div>
 
-          {/* =====================================================
+          {/* ======================================================
               LEGEND
-          ===================================================== */}
+          ====================================================== */}
 
           <div className={styles.legend}>
+
             <div className={styles.legendProject}>
+
               <span className={styles.legendPin}>
                 <span />
               </span>
 
-              <span>PROJECT LOCATION</span>
+              <span>
+                PROJECT LOCATION
+              </span>
+
             </div>
 
             <span
@@ -657,17 +733,21 @@ export default function IndiaMap() {
             <span>
               HOVER OR TAP ON A LOCATION TO VIEW PROJECTS
             </span>
+
           </div>
+
         </div>
 
-        {/* =====================================================
+        {/* ======================================================
             FOOTER
-        ===================================================== */}
+        ====================================================== */}
 
         <div className={styles.bottomSection}>
+
           <div className={styles.bottomLine} />
 
           <div className={styles.bottomContent}>
+
             <span className={styles.monoLabel}>
               CIVIL · INFRASTRUCTURE · TURNKEY
             </span>
@@ -681,9 +761,13 @@ export default function IndiaMap() {
             <span className={styles.monoLabel}>
               BUILDING THE NATION
             </span>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 }
