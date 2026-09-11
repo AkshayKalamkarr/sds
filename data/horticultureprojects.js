@@ -19,7 +19,7 @@ export const projects = [
         ],
         galleryImages: [
             { image: "/images/projects/horticultureprojects/COASTALROAD/costal-1.jpeg", alt: "coastal-1" },
-            { image: "/images/projects/horticultureprojects/COASTALROAD/costal-2.jpeg", alt: "coastal-2" },
+            // { image: "/images/projects/horticultureprojects/COASTALROAD/costal-2.jpeg", alt: "coastal-2" },
             { image: "/images/projects/horticultureprojects/COASTALROAD/costal-3.jpeg", alt: "coastal-3" },
             { image: "/images/projects/horticultureprojects/COASTALROAD/costal-4.jpeg", alt: "coastal-4" },
             { image: "/images/projects/horticultureprojects/COASTALROAD/costal-5.jpeg", alt: "coastal-5" },

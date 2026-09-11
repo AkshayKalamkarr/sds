@@ -125,25 +125,25 @@ function Navbar({ className }) {
                                 <ProductItem
                                     title="Commercial Projects"
                                     href="/project/commercialprojects"
-                                    src="/images/home/commercial.jpg"
+                                    src="/images/projects/CARNACBUNDER5B/carnac-5.jpeg"
                                     description="Explore our commercial project portfolio."
                                 />
                                 <ProductItem
                                     title="Residential Projects"
                                     href="/project/residencialprojects"
-                                    src="/images/home/residencial2.jpg"
+                                    src="/images/projects/AMARANTE/amarante.png"
                                     description="Discover our residential project designs."
                                 />
                                 <ProductItem
                                     title="Guest House"
                                     href="/project/guesthouse"
-                                    src="/images/home/guestHouse.jpg"
+                                    src="/images/projects/MUDHOUSE/house-5.png"
                                     description="View our guest house projects."
                                 />
                                 <ProductItem
                                     title="Green Initiatives"
                                     href="/project/horticultureprojects"
-                                    src="/images/home/greeninitiative.jpeg"
+                                    src="/images/projects/horticultureprojects/PHOENIXMARKET/phoenix-1.png"
                                     description="Explore Our Green Creations"
                                 />
                             </div>

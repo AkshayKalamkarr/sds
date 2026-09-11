@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import {
-  Space_Grotesk,
-  Source_Serif_4,
-  IBM_Plex_Mono,
-} from "next/font/google";
+import Link from "next/link";
+import { Space_Grotesk, Source_Serif_4, IBM_Plex_Mono } from "next/font/google";
 
 import styles from "./IndiaMap.module.css";
 
@@ -34,6 +31,13 @@ const plexMono = IBM_Plex_Mono({
 
 /* ============================================================
    PROJECT LOCATIONS
+
+   NOTE: each location now needs an "image" (a representative
+   photo for that location/project) and a "slug" (used to build
+   the "VIEW ALL PROJECTS" link, e.g. /projects/delhi). Update
+   the image paths below to real files under /public, and point
+   the slug at whatever route in your app lists that location's
+   projects.
 ============================================================ */
 
 const PROJECT_LOCATIONS = [
@@ -43,6 +47,8 @@ const PROJECT_LOCATIONS = [
     state: "Delhi",
     x: 36.45,
     y: 25.37,
+    slug: "delhi",
+    image: "/images/locations/delhi.jpg",
     projects: [
       {
         id: "delhi-1",
@@ -71,6 +77,8 @@ const PROJECT_LOCATIONS = [
     state: "Rajasthan",
     x: 24.86,
     y: 35.02,
+    slug: "rajasthan",
+    image: "/images/locations/rajasthan.jpg",
     projects: [
       {
         id: "rajasthan-1",
@@ -93,6 +101,8 @@ const PROJECT_LOCATIONS = [
     state: "Uttar Pradesh",
     x: 50.47,
     y: 37.32,
+    slug: "uttar-pradesh",
+    image: "/images/locations/uttar-pradesh.jpg",
     projects: [
       {
         id: "up-1",
@@ -115,6 +125,8 @@ const PROJECT_LOCATIONS = [
     state: "Jharkhand",
     x: 58.86,
     y: 43.21,
+    slug: "jharkhand",
+    image: "/images/locations/jharkhand.jpg",
     projects: [
       {
         id: "jharkhand-1",
@@ -143,6 +155,8 @@ const PROJECT_LOCATIONS = [
     state: "Gujarat",
     x: 18.21,
     y: 47.95,
+    slug: "gujarat",
+    image: "/images/locations/gujarat.jpg",
     projects: [
       {
         id: "gujarat-1",
@@ -171,6 +185,8 @@ const PROJECT_LOCATIONS = [
     state: "Maharashtra",
     x: 25.69,
     y: 59.75,
+    slug: "raigad",
+    image: "/images/locations/raigad.jpg",
     projects: [
       {
         id: "raigad-1",
@@ -199,6 +215,8 @@ const PROJECT_LOCATIONS = [
     state: "Maharashtra",
     x: 23.24,
     y: 57.75,
+    slug: "mumbai",
+    image: "/images/locations/mumbai.jpg",
     projects: [
       {
         id: "mumbai-1",
@@ -227,6 +245,8 @@ const PROJECT_LOCATIONS = [
     state: "Maharashtra",
     x: 28.69,
     y: 59.75,
+    slug: "pune",
+    image: "/images/locations/pune.jpg",
     projects: [
       {
         id: "pune-1",
@@ -255,6 +275,8 @@ const PROJECT_LOCATIONS = [
     state: "Odisha",
     x: 54.86,
     y: 59.08,
+    slug: "odisha",
+    image: "/images/locations/odisha.jpg",
     projects: [
       {
         id: "odisha-1",
@@ -283,6 +305,8 @@ const PROJECT_LOCATIONS = [
     state: "Karnataka",
     x: 35.14,
     y: 72.85,
+    slug: "bangalore",
+    image: "/images/locations/bangalore.jpg",
     projects: [
       {
         id: "bangalore-1",
@@ -311,6 +335,8 @@ const PROJECT_LOCATIONS = [
     state: "Karnataka",
     x: 34.1,
     y: 68.8,
+    slug: "karnataka",
+    image: "/images/locations/karnataka.jpg",
     projects: [
       {
         id: "karnataka-1",
@@ -333,6 +359,8 @@ const PROJECT_LOCATIONS = [
     state: "Tamil Nadu",
     x: 40.2,
     y: 90.02,
+    slug: "tamil-nadu",
+    image: "/images/locations/tamil-nadu.jpg",
     projects: [
       {
         id: "tamilnadu-1",
@@ -364,30 +392,58 @@ export default function IndiaMap() {
   const [activeLocation, setActiveLocation] = useState(null);
 
   /* ============================================================
-     LOCATION CLICK
+     IS TOUCH DEVICE HELPER
+
+     On touch devices there's no real "hover", so we keep the
+     click-to-toggle behaviour. On pointer/mouse devices we open
+     the card (image + "VIEW ALL PROJECTS" link) as soon as the
+     cursor enters the marker, and close it again when the
+     cursor leaves — no click required.
+  ============================================================ */
+
+  const isHoverCapable = () =>
+    typeof window !== "undefined" &&
+    window.matchMedia &&
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  /* ============================================================
+     LOCATION CLICK (touch / fallback)
   ============================================================ */
 
   const handleLocationClick = (location) => {
+    // On hover-capable devices the click is redundant (hover already
+    // opens it), but we keep it so keyboard/touch users can still
+    // toggle the card manually.
     setActiveLocation((current) =>
-      current?.id === location.id ? null : location
+      current?.id === location.id ? null : location,
     );
   };
 
   /* ============================================================
-     MOUSE ENTER
+     MOUSE ENTER — open image + view link immediately
   ============================================================ */
 
   const handleMouseEnter = (location) => {
-    if (
-      typeof window !== "undefined" &&
-      window.innerWidth >= 769
-    ) {
+    if (isHoverCapable()) {
       setActiveLocation(location);
     }
   };
 
   /* ============================================================
-     CLOSE PROJECT CARD
+     MOUSE LEAVE — close the card again when cursor leaves
+     the marker/card area (hover-capable devices only)
+  ============================================================ */
+
+  const handleMouseLeave = (location) => {
+    if (isHoverCapable()) {
+      setActiveLocation((current) =>
+        current?.id === location.id ? null : current,
+      );
+    }
+  };
+
+  /* ============================================================
+     CLOSE PROJECT CARD (explicit close button / touch devices)
   ============================================================ */
 
   const closeCard = (event) => {
@@ -412,10 +468,7 @@ export default function IndiaMap() {
           DECORATIVE LEDGER LINES
       ======================================================== */}
 
-      <div
-        className={styles.ledgerLines}
-        aria-hidden="true"
-      />
+      <div className={styles.ledgerLines} aria-hidden="true" />
 
       {/* ========================================================
           CORNER MARKS
@@ -442,13 +495,11 @@ export default function IndiaMap() {
       />
 
       <div className={styles.container}>
-
         {/* ======================================================
             HEADER
         ====================================================== */}
 
         <div className={styles.header}>
-
           <div className={styles.headerLeft}>
             <p className={styles.eyebrow}>
               SDS BHARAT INFRATECH PVT. LTD. — NATIONAL PRESENCE
@@ -463,9 +514,8 @@ export default function IndiaMap() {
 
           <div className={styles.headerRight}>
             <p className={styles.description}>
-              Delivering civil construction, infrastructure and
-              turnkey solutions across multiple states and regions
-              in India.
+              Delivering civil construction, infrastructure and turnkey
+              solutions across multiple states and regions in India.
             </p>
 
             <div className={styles.locationCount}>
@@ -473,12 +523,18 @@ export default function IndiaMap() {
                 {String(PROJECT_LOCATIONS.length).padStart(2, "0")}
               </span>
 
-              <span className={styles.countLabel}>
-                PROJECT LOCATIONS
-              </span>
+              <span className={styles.countLabel}>PROJECT LOCATIONS</span>
             </div>
+            <span className={styles.countNumber}>
+              <h3>5 Lakh + SQ. FT. OF INTERIOR WORK</h3>
+            </span>
+            <span className={styles.countNumber}>
+              <h3> 10 Lakh + SQ. FT. OF LANDSCAPE & GARDEN WORK</h3>
+            </span>
+            <span className={styles.countNumber}>
+              <h3> 1 Lakh + SQ. FT. OF CIVIL CONSTRUCTION</h3>
+            </span>
           </div>
-
         </div>
 
         {/* ======================================================
@@ -486,9 +542,7 @@ export default function IndiaMap() {
         ====================================================== */}
 
         <div className={styles.mapArea}>
-
           <div className={styles.mapFrame}>
-
             {/* 
               IMPORTANT:
               Place your map image here:
@@ -512,10 +566,8 @@ export default function IndiaMap() {
             ================================================== */}
 
             <div className={styles.mapOverlay}>
-
               {PROJECT_LOCATIONS.map((location) => {
-                const isActive =
-                  activeLocation?.id === location.id;
+                const isActive = activeLocation?.id === location.id;
 
                 return (
                   <div
@@ -528,62 +580,50 @@ export default function IndiaMap() {
                       left: `${location.x}%`,
                       top: `${location.y}%`,
                     }}
+                    onMouseEnter={() => handleMouseEnter(location)}
+                    onMouseLeave={() => handleMouseLeave(location)}
                   >
-
                     {/* ==================================================
-                        PIN
+                        PIN (the red point)
                     ================================================== */}
 
                     <button
                       type="button"
                       className={styles.markerButton}
-                      onClick={() =>
-                        handleLocationClick(location)
-                      }
-                      onMouseEnter={() =>
-                        handleMouseEnter(location)
-                      }
+                      onClick={() => handleLocationClick(location)}
                       aria-label={`View projects in ${location.city}`}
                       aria-expanded={isActive}
                     >
-                      <span
-                        className={styles.markerPulse}
-                        aria-hidden="true"
-                      />
+                      <span className={styles.markerPulse} aria-hidden="true" />
 
-                      <span
-                        className={styles.markerRing}
-                        aria-hidden="true"
-                      />
+                      <span className={styles.markerRing} aria-hidden="true" />
 
-                      <span
-                        className={styles.markerDot}
-                        aria-hidden="true"
-                      />
+                      <span className={styles.markerDot} aria-hidden="true" />
                     </button>
 
                     {/* ==================================================
                         PROJECT CARD
+
+                        Opens as soon as the cursor enters the marker
+                        (see onMouseEnter on the wrapper above) and shows
+                        the location image plus a "VIEW ALL PROJECTS"
+                        link. It stays open while the cursor is anywhere
+                        over the marker or the card itself, and closes on
+                        mouse leave (or via the × button on touch).
                     ================================================== */}
 
                     <div
                       className={`
                         ${styles.projectCard}
                         ${isActive ? styles.projectCardActive : ""}
-                        ${
-                          location.x > 55
-                            ? styles.cardLeft
-                            : ""
-                        }
+                        ${location.x > 55 ? styles.cardLeft : ""}
                       `}
                     >
-
                       {/* ==================================================
                           CARD HEADER
                       ================================================== */}
 
                       <div className={styles.cardHeader}>
-
                         <div>
                           <span className={styles.cardNumber}>
                             {String(location.id).padStart(2, "0")}
@@ -602,109 +642,47 @@ export default function IndiaMap() {
                         >
                           ×
                         </button>
-
                       </div>
 
                       {/* ==================================================
                           CARD DIVIDER
                       ================================================== */}
 
-                      <div
-                        className={styles.cardDivider}
-                      />
+                      <div className={styles.cardDivider} />
 
                       {/* ==================================================
-                          PROJECT LABEL
+                          LOCATION IMAGE
+
+                          Only rendered while this card is active, so the
+                          image isn't fetched for every marker up front.
                       ================================================== */}
 
-                      <span className={styles.cardLabel}>
-                        PROJECTS
-                      </span>
+                      {isActive && (
+                        <img
+                          src={location.image}
+                          alt={`${location.city} project site`}
+                          className={styles.cardImage}
+                          draggable="false"
+                        />
+                      )}
 
                       {/* ==================================================
-                          PROJECT LIST
+                          VIEW PROJECTS LINK
                       ================================================== */}
 
-                      <div className={styles.projectList}>
-
-                        {location.projects.map(
-                          (project) => (
-                            <div
-                              className={
-                                styles.projectItem
-                              }
-                              key={project.id}
-                            >
-
-                              <div
-                                className={
-                                  styles.projectIcon
-                                }
-                              >
-                                ✓
-                              </div>
-
-                              <div
-                                className={
-                                  styles.projectInfo
-                                }
-                              >
-
-                                <h4>
-                                  {project.name}
-                                </h4>
-
-                                <p>
-                                  {project.type}
-                                </p>
-
-                                <span
-                                  className={`
-                                    ${styles.status}
-                                    ${
-                                      project.status ===
-                                      "ONGOING"
-                                        ? styles.statusOngoing
-                                        : styles.statusCompleted
-                                    }
-                                  `}
-                                >
-                                  {project.status}
-                                </span>
-
-                              </div>
-
-                            </div>
-                          )
-                        )}
-
-                      </div>
-
-                      {/* ==================================================
-                          VIEW PROJECTS BUTTON
-                      ================================================== */}
-
-                      <button
-                        type="button"
+                      <Link
+                        href={`/projects/${location.slug}`}
                         className={styles.viewProjects}
                       >
-                        <span>
-                          VIEW ALL PROJECTS
-                        </span>
+                        <span>VIEW ALL PROJECTS</span>
 
-                        <span aria-hidden="true">
-                          ↗
-                        </span>
-                      </button>
-
+                        <span aria-hidden="true">↗</span>
+                      </Link>
                     </div>
-
                   </div>
                 );
               })}
-
             </div>
-
           </div>
 
           {/* ======================================================
@@ -712,30 +690,18 @@ export default function IndiaMap() {
           ====================================================== */}
 
           <div className={styles.legend}>
-
             <div className={styles.legendProject}>
-
               <span className={styles.legendPin}>
                 <span />
               </span>
 
-              <span>
-                PROJECT LOCATION
-              </span>
-
+              <span>PROJECT LOCATION</span>
             </div>
 
-            <span
-              className={styles.legendSeparator}
-              aria-hidden="true"
-            />
+            <span className={styles.legendSeparator} aria-hidden="true" />
 
-            <span>
-              HOVER OR TAP ON A LOCATION TO VIEW PROJECTS
-            </span>
-
+            <span>HOVER OR TAP ON A LOCATION TO VIEW PROJECTS</span>
           </div>
-
         </div>
 
         {/* ======================================================
@@ -743,31 +709,22 @@ export default function IndiaMap() {
         ====================================================== */}
 
         <div className={styles.bottomSection}>
-
           <div className={styles.bottomLine} />
 
           <div className={styles.bottomContent}>
-
             <span className={styles.monoLabel}>
               CIVIL · INFRASTRUCTURE · TURNKEY
             </span>
 
             <p>
-              From urban developments to industrial
-              infrastructure, SDS Bharat Infratech delivers
-              construction solutions across India.
+              From urban developments to industrial infrastructure, SDS Bharat
+              Infratech delivers construction solutions across India.
             </p>
 
-            <span className={styles.monoLabel}>
-              BUILDING THE NATION
-            </span>
-
+            <span className={styles.monoLabel}>BUILDING THE NATION</span>
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
