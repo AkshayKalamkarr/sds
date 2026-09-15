@@ -30,6 +30,72 @@ const plexMono = IBM_Plex_Mono({
 });
 
 /* ============================================================
+   MAP PIN
+
+   Push-pin style marker: a red glossy ball on top with a soft
+   highlight, sitting on a slim metallic needle that tapers to a
+   sharp point. The tip of the pin still sits at the bottom of
+   the viewBox (12, 31.2) — same as before — so the existing CSS
+   that lifts the pin by half its height to land the TIP exactly
+   on the x/y coordinate keeps working without any changes.
+============================================================ */
+
+function MapPin({ className }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 32"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <defs>
+        {/* metallic gradient for the needle/stem */}
+        <linearGradient id="pinStemGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#7a7a7a" />
+          <stop offset="45%" stopColor="#3f3f3f" />
+          <stop offset="100%" stopColor="#161616" />
+        </linearGradient>
+
+        {/* glossy red gradient for the ball */}
+        <linearGradient id="pinBallGradient" x1="15%" y1="10%" x2="90%" y2="95%">
+          <stop offset="0%" stopColor="#ff6a55" />
+          <stop offset="35%" stopColor="#ee2a1e" />
+          <stop offset="100%" stopColor="#9c0d08" />
+        </linearGradient>
+      </defs>
+
+      {/* needle / stem, tapering to the tip at (12, 31.2) */}
+      <path
+        className={styles.pinStem}
+        d="M10.1 14.6 L10.1 26.3 L12 31.2 L13.9 26.3 L13.9 14.6 Z"
+        fill="url(#pinStemGradient)"
+      />
+
+      {/* ball */}
+      <circle
+        className={styles.pinBall}
+        cx="12"
+        cy="9.4"
+        r="8.6"
+        fill="url(#pinBallGradient)"
+      />
+
+      {/* glossy highlight */}
+      <ellipse
+        className={styles.pinHighlight}
+        cx="8.9"
+        cy="6.1"
+        rx="2.7"
+        ry="2.15"
+        fill="#ffdcd2"
+        opacity="0.9"
+      />
+    </svg>
+  );
+}
+
+/* ============================================================
    PROJECT LOCATIONS
 
    NOTE: each location now needs an "image" (a representative
@@ -584,7 +650,12 @@ export default function IndiaMap() {
                     onMouseLeave={() => handleMouseLeave(location)}
                   >
                     {/* ==================================================
-                        PIN (the red point)
+                        PIN MARKER
+
+                        Push-pin (ball + needle) marker. Its tip sits
+                        exactly on the location's x/y coordinate (see
+                        .markerButton in the CSS), and the pulse is a
+                        small ripple on the ground under the tip.
                     ================================================== */}
 
                     <button
@@ -596,9 +667,7 @@ export default function IndiaMap() {
                     >
                       <span className={styles.markerPulse} aria-hidden="true" />
 
-                      <span className={styles.markerRing} aria-hidden="true" />
-
-                      <span className={styles.markerDot} aria-hidden="true" />
+                      <MapPin className={styles.markerPin} />
                     </button>
 
                     {/* ==================================================
@@ -692,7 +761,7 @@ export default function IndiaMap() {
           <div className={styles.legend}>
             <div className={styles.legendProject}>
               <span className={styles.legendPin}>
-                <span />
+                <MapPin className={styles.legendPinIcon} />
               </span>
 
               <span>PROJECT LOCATION</span>

@@ -1,0 +1,133 @@
+/* ============================================================
+   IndiaMap.module.css — MARKER STYLES (RED PIN)
+
+   DELETE your existing .markerDot, .markerRing and .markerPulse
+   rules (and any keyframes they used), then paste this block in.
+   Keep the rest of the file as it is.
+
+   Red used here:
+     base    #e02b20
+     active  #a81409
+     pulse   rgba(224, 43, 32, 0.4)
+============================================================ */
+
+/* Wrapper stays anchored to the location's x/y coordinate.
+   Keep whatever z-index / positioning you already had — only
+   the transform matters here. */
+.markerWrapper {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+/* ------------------------------------------------------------
+   THE PIN BUTTON
+
+   The wrapper centres the button on the coordinate, so we lift
+   the button by half its own height — that puts the POINT of
+   the pin exactly on the coordinate instead of its middle.
+------------------------------------------------------------ */
+.markerButton {
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 29px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease;
+}
+
+.markerButton:hover,
+.markerActive .markerButton {
+  /* small lift on hover / when the card is open */
+  transform: translateY(calc(-50% - 5px));
+}
+
+.markerButton:focus-visible {
+  outline: 2px solid #e02b20;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------
+   THE PIN ITSELF
+------------------------------------------------------------ */
+.markerPin {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 3px 4px red);
+}
+
+.pinBody {
+  fill: #e02b20;
+  stroke: red;
+  stroke-width: 0.6;
+}
+
+.pinHole {
+  fill: #ffffff;
+}
+
+.markerActive .pinBody {
+  fill: #a81409;
+}
+
+/* ------------------------------------------------------------
+   GROUND PULSE (sits under the tip of the pin)
+------------------------------------------------------------ */
+.markerPulse {
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 16px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(224, 43, 32, 0.4);
+  pointer-events: none;
+  animation: pinPulse 2.2s ease-out infinite;
+}
+
+@keyframes pinPulse {
+  0% {
+    transform: translateX(-50%) scale(0.4);
+    opacity: 0.85;
+  }
+  70%,
+  100% {
+    transform: translateX(-50%) scale(1.9);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .markerPulse {
+    animation: none;
+    opacity: 0.45;
+  }
+
+  .markerButton {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   LEGEND PIN (replaces the old dot in the legend)
+------------------------------------------------------------ */
+.legendPin {
+  display: inline-flex;
+  width: 11px;
+  height: 15px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+}
+
+.legendPinIcon {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
