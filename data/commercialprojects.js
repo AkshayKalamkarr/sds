@@ -29,107 +29,6 @@ export const projects = [
     ],
   },
   {
-    slug: "project-16",
-    title: "THE JOKER BISTRO",
-    image: "/images/projects/JOCKER/jocker-8.png",
-    description: "NAVI MUMBAI,CBD-BELAPUR",
-    fullDescription:
-      "At Jocker Bistro every design element has been meticulously crafted by Supreme Infrastructure Company from the evocative brick storytelling wall to the bold lighting plush velvet booths and striking mosaic tabletops .This space isnt just built -its curated to bring the bistro vision to life as an immersive dining experience . LAYERED TEXTURES & CUSTOM DECOR PANELS - blending tactile surfaces with modern finishes to create depth and intrigue .GEOMETRIC LIGHTING & BOLD COLOR PALETTE -Featuring deep reds,charcoal greys ,and warm wooden tones for a rich ,moody atmosphere .STATEMENT WALLS - Showcasing motivational typography ,graphic murals and hand-painted art that spark conversation .CUSTOM SEATING LAYOUTS - thoughtfully arranged for inimate dining ,group gatherings and casual lounging .AMBIENT LIGHTING DESIGN - A combination of warm industrial pendants and sleek architectural downlights enhances the mood at every turn .SHOWSTOPPER BAR DESIGN - Elevated bottle displays, elegant finishes and functional design come together in a dramatic centerpiece.",
-    tagLine: "Atlanats Crew Management",
-    highlights: [
-      { icon: "Armchair", description: "Layered Textures" },
-      { icon: "PaintRoller", description: "Custom Decor Panels" },
-      { icon: "Fence", description: "Geometric Decor Panels" },
-      { icon: "LampWallUp", description: "Ambient Lighting Design" },
-      { icon: "Wine", description: "Showstopper Bar Design" },
-    ],
-    configuration: [
-      // { flat: "7500 sqft", carpet: "120 Days" },
-    ],
-
-    galleryImages: [
-      { image: "/images/projects/JOCKER/jocker-1.jpeg", alt: "jocker-1" },
-      { image: "/images/projects/JOCKER/jocker-2.jpeg", alt: "jocker-2" },
-      { image: "/images/projects/JOCKER/jocker-3.jpeg", alt: "jocker-3" },
-      { image: "/images/projects/JOCKER/jocker-4.jpeg", alt: "jocker-4" },
-      { image: "/images/projects/JOCKER/jocker-5.jpeg", alt: "jocker-5" },
-      { image: "/images/projects/JOCKER/jocker-6.jpeg", alt: "jocker-6" },
-      { image: "/images/projects/JOCKER/jocker-7.jpg", alt: "jocker-7" },
-      { image: "/images/projects/JOCKER/jocker-8.png", alt: "jocker-8" },
-    ],
-  },
-
-  {
-    slug: "project-15",
-    title: "OM LAXMI CONSOLIDATORS (OMLC)",
-    image: "/images/projects/OMLC/omlc-1.png",
-    description: "THE CORPORATE PARK,NAVI MUMBAI",
-    fullDescription:
-      "CONTEMPORARY WORKSPACE DESIGN -Sleek ,ergonomic layouts tailored for high productivity ,High-end white workstations paired with designer office chairs, Streamlined desk setups that promote collaboration and comfort. VIBRANT & INSPIRING AMBIENCE - Bold yellow and grey accent walls for a lively atmosphere Motivational wall quotes like creativity is intelligence having fun to inspire daily innovation ,Thoughtfully designed lighting for an uplifting environment . CUSTOM PARTITION DESIGN - A handcrafted partition using wood and acrylic ,Intricate patterned panels that blend aesthatic with functionality ,smartly divides space while keeping an open ,connected feel. SIGNATURE ELEMENTS - Artistic epoxy world map table a stunning custom centerpiece symbolizing global amition and creativity Geometric wall paneling a premium wood-texture backdrop adding depth and luxury to executive areas ,ambient shelving & decor integrated lighting and modern display units to enhance visual appeal .",
-    tagLine: "Atlanats Crew Management",
-    highlights: [
-      { icon: "TentTree", description: "Vibrant & Inspiring " },
-      { icon: "Columns3", description: "Custom Partition Design" },
-      { icon: "ComponentIcon", description: "Signature Elements" },
-      { icon: "LampWallUp", description: "Ambient Lighting" },
-      { icon: "LampWallDown", description: "Integrated Lighting" },
-    ],
-    configuration: [
-      // { flat: "7500 sqft", carpet: "120 Days" },
-    ],
-
-    galleryImages: [
-      { image: "/images/projects/OMLC/omlc-1.png", alt: "omlc-1" },
-      { image: "/images/projects/OMLC/omlc-2.jpeg", alt: "omlc-2" },
-      { image: "/images/projects/OMLC/omlc-3.jpeg", alt: "omlc-3" },
-      { image: "/images/projects/OMLC/omlc-4.jpeg", alt: "omlc-4" },
-      { image: "/images/projects/OMLC/omlc-5.jpeg", alt: "omlc-5" },
-      { image: "/images/projects/OMLC/omlc-6.jpeg", alt: "omlc-6" },
-      { image: "/images/projects/OMLC/omlc-7.jpeg", alt: "omlc-7" },
-      { image: "/images/projects/OMLC/omlc-8.jpeg", alt: "omlc-8" },
-      { image: "/images/projects/OMLC/omlc-9.png", alt: "omlc-9" },
-      { image: "/images/projects/OMLC/omlc-10.jpeg", alt: "omlc-10" },
-    ],
-  },
-  {
-    slug: "project-14",
-    title: "THE CORPORATE PARK , NAVI MUMBAI",
-    image: "/images/projects/TCP/tcp-2.jpeg",
-    description: "THE CORPORATE PARK ,NAVI MUMBAI",
-    fullDescription:
-      "The modern office space is designed with a perfect blend of aesthetics and functionality. The artwork wall with a decorative decal sticker enhances the ambiance, creating a visually appealing atmosphere. A dedicated display area with an artifact section adds sophistication and showcases achievements. The ceiling with a highlighted groove finish brings depth and style to the space. The TV unit with a display section provides an efficient setup for presentations and meetings. Additionally, the ledge sitting with table support offers a comfortable yet productive work environment, seamlessly combining innovation and practicality for an inspiring workplace experience.",
-    highlights: [
-      { icon: "Palette", description: "Modern & Contemporary Design" },
-      { icon: "Brush", description: "Custom Wall Accents & Branding" },
-      { icon: "Box", description: "Efficient Space Utilization" },
-      { icon: "Lightbulb", description: "Ambient & Task Lighting" },
-      { icon: "Diamond", description: "High-Quality Materials & Finishes" },
-    ],
-    configuration: [
-      { flat: " 2000 sqft", carpet: "60 days" },
-    ],
-    videos: [
-      {
-        url: "/images/projects/TCP/tcp-video-4.mp4",
-        thumbnail: "/images/projects/TCP/tcp-2.jpeg",
-        title: "Office Overview"
-      },
-      {
-        url: "/images/projects/TCP/tcp-video-7.mp4",
-        thumbnail: "/images/projects/TCP/tcp-3.jpeg",
-        title: "cabin Overview"
-      }
-    ],
-
-    galleryImages: [
-      { image: "/images/projects/TCP/tcp-1.jpeg", alt: "tcp-1" },
-      { image: "/images/projects/TCP/tcp-2.jpeg", alt: "tcp-2" },
-      { image: "/images/projects/TCP/tcp-3.jpeg", alt: "tcp-3" },
-      { image: "/images/projects/TCP/tcp-4.jpeg", alt: "tcp-4" },
-      { image: "/images/projects/TCP/tcp-5.jpeg", alt: "tcp-5" },
-    ],
-  },
-  {
     slug: "project-13",
     title: "TATA POWER RENEWABLE ENERGY LIMITED CARNAC BUNDER 5B, MUMBAI ",
     image: "/images/projects/CARNACBUNDER5B/carnac-5.jpeg",
@@ -229,161 +128,6 @@ export const projects = [
       { image: "/images/projects/COACT/coact-11.jpg", alt: "coact-11" },
       { image: "/images/projects/COACT/coact-13.jpg", alt: "coact-13" },
       { image: "/images/projects/COACT/coact-14.jpg", alt: "coact-14" }
-    ],
-  },
-  {
-    slug: "project-10",
-    title: "CONSTRUCTION OF NEW FACTORY & GARDEN LANDSCAPING AT ALLANA KHOPOLI , NAVI MUMBAI",
-    image: "/images/projects/ALLANA/allana-1.jpeg",
-    description: "CONSTRUCTION OF NEW FACTORY & GARDEN LANDSCAPING AT ALLANA KHOPOLI",
-    fullDescription:
-      "The Allana Factory and Garden Landscaping project in Khopoli is a comprehensive construction and landscaping initiative, covering 10,000 square feet and set for completion in 60 days. The G+4 story building boasts a striking glazed and ACP façade, providing a sleek, modern exterior that stands out. Surrounding the building, acres of carefully planned garden landscaping incorporate colorful plants and a variety of green shades, creating a vibrant, layered effect that complements the building’s architecture. Designed with aesthetics in mind, the landscaping brings visual harmony and a natural charm to the industrial setting, offering a balanced and inviting environment for employees and visitors alike.",
-    tagLine: "Project information",
-    highlights: [
-      { icon: "BrickWall", description: "G + 4 story building with glaze and acp facade" },
-      { icon: "Fence", description: "Acres of garden landscaping at building surrounding area " },
-      { icon: "Sprout", description: "Colorfull plants" },
-      { icon: "Leaf", description: "Different shade of greenrise" },
-      { icon: "LeafyGreen", description: "Aeshtatic way" },
-    ],
-    configuration: [
-      { flat: "10000 sqft", carpet: "60 days" },
-    ],
-    // Added video section
-    galleryImages: [
-      { image: "/images/projects/ALLANA/allana-5.jpeg", alt: "allana-5" },
-      { image: "/images/projects/ALLANA/allana-6.jpeg", alt: "allana-6" },
-      { image: "/images/projects/ALLANA/allana-7.jpeg", alt: "allana-7" },
-    ],
-  },
-  {
-    slug: "project-9",
-    title: "KARANJADE BOUNDARY WALL, FOUNDATIONS 220KV,GIS STATION, TOSHIBA , NAVI MUMBAI",
-    image: "/images/projects/TOSHIBAKARANJADE/toshiba-2.jpg",
-    description: "TATA POWER FIRE TANK",
-    fullDescription:
-      "At the Karanjade Boundary Wall project for the 220KV GIS Station by Toshiba, a comprehensive boundary development plan was implemented. The project encompassed a detailed 1.4 km boundary wall construction with strategic garden fencing that seamlessly integrated the surrounding landscaping area. Diverse plant selections were carefully curated to enhance the aesthetic appeal, featuring a vibrant palette of colorful botanical species. The thoughtfully designed landscape not only provides robust perimeter security but also creates an visually appealing green environment around the critical infrastructure. Precision in foundation work and strategic plant placement ensures both functional and aesthetic excellence, transforming the boundary wall from a mere structural element into an integrated, attractive landscape solution that complements the technical infrastructure of the GIS station.",
-    tagLine: "Project information",
-    highlights: [
-      { icon: "Wallpaper", description: "1.4 km Boundry Wall" },
-      { icon: "FlipHorizontal", description: "Garden fencing" },
-      { icon: "Component", description: "Surrounding Landscipping Area" },
-      { icon: "Fence", description: "Different Plants" },
-      { icon: "Armchair", description: "ColorFull Plants" },
-    ],
-    configuration: [
-      { flat: "8000 sqft", carpet: "45 days" },
-    ],
-    // Added video section
-    galleryImages: [
-      { image: "/images/projects/TOSHIBAKARANJADE/toshiba-2.jpg", alt: "toshiba-2" },
-      { image: "/images/projects/TOSHIBAKARANJADE/toshiba-3.jpg", alt: "toshiba-3" },
-      { image: "/images/projects/TOSHIBAKARANJADE/toshiba-5.jpg", alt: "toshiba-5" },
-
-    ],
-  },
-  {
-    slug: "project-8",
-    title: "FINANCE HEADQUARTER OF TATA POWER PENINSULA ,MUMBAI",
-    image: "/images/projects/PENINSULA/peninsula-3.jpeg",
-    description: "FINANCE HEADQUARTER OF TATA POWER PENINSULA",
-    fullDescription:
-      "The Finance Headquarters of Tata Power Peninsula spans 8,000 square feet and is set for transformation over 45 days into a sophisticated, functional workspace that reflects Tata Power’s values. Key design elements include tastefully highlighted walls with elegant wallpaper, roller blinds on the windows for adjustable natural light, and a luxurious CFO cabin designed with attention to detail. Decorative fluted panels add a touch of modern elegance, while customized furniture enhances the comfort and professionalism of the space. This project combines high-quality finishes with thoughtful layouts, creating an inviting environment that fosters productivity and aligns with Tata Power’s prestigious brand.",
-    tagLine: "Project information",
-    highlights: [
-      { icon: "Wallpaper", description: "Highlisting the walls with wallpaper" },
-      { icon: "FlipHorizontal", description: "windows with roller blinds" },
-      { icon: "Component", description: "designed luxurious cfo cabin" },
-      { icon: "Fence", description: "Decorative fluted panels customized with brought" },
-      { icon: "Armchair", description: "furniture" },
-    ],
-    configuration: [
-      { flat: "8000 sqft", carpet: "45 days" },
-    ],
-    // Added video section
-    videos: [
-      {
-        url: "/images/projects/PENINSULA/peninsulaVideo-1.mp4",
-        thumbnail: "/images/projects/PENINSULA/peninsula-2.jpeg",
-        title: "Office Overview"
-      },
-      {
-        url: "/images/projects/PENINSULA/peninsulaVideo-9.mp4",
-        thumbnail: "/images/projects/PENINSULA/peninsula-10.jpeg",
-        title: "Cabin Overview"
-      }
-    ],
-    galleryImages: [
-      { image: "/images/projects/PENINSULA/peninsula-1.jpeg", alt: "tata-1" },
-      { image: "/images/projects/PENINSULA/peninsula-2.jpeg", alt: "tata-2" },
-      { image: "/images/projects/PENINSULA/peninsula-3.jpeg", alt: "tata-3" },
-      { image: "/images/projects/PENINSULA/peninsula-4.jpeg", alt: "tata-4" },
-      { image: "/images/projects/PENINSULA/peninsula-6.jpeg", alt: "tata-6" },
-      { image: "/images/projects/PENINSULA/peninsula-7.jpeg", alt: "tata-7" },
-      { image: "/images/projects/PENINSULA/peninsula-10.jpeg", alt: "tata-10" },
-
-    ],
-  },
-  {
-    slug: "project-7",
-    title: "SUPREME INFRASTRUCTURE HEAD OFFICE AT MAYURESH PLANET BELAPUR ,NAVI MUMBAI",
-    image: "/images/projects/MAYURESHPLANET/landscape.jpg",
-    description: "DEVELOPMENT OF SUPREME INFRASTRUCTURE COMPANY OFFICE",
-    fullDescription:
-      "Spanning 1,100 square feet, the Supreme Infrastructure Head Office renovation at Mayuresh Planet, Belapur, is a model of space efficiency and contemporary design, completed in just 44 days. The office’s vibrant, functional atmosphere is achieved through a combination of striking decorative MS partitions and colorful back-painted magnetic glass, adding both utility and visual interest. Unique lighting elements, including zigzag hanging lights, lend character and warmth to the space, enhancing the modern aesthetic. Thoughtful space utilization ensures that every area is both purposeful and appealing, providing a stylish and efficient workspace that reflects the dynamic ethos of Supreme Infrastructure.",
-    tagLine: "DEVELOPMENT OF FINANCES OFFICE SPACE AT TPSSL, BANGOLARE",
-    highlights: [
-      { icon: "BetweenVerticalStart", description: "Decorative MS partition" },
-      { icon: "FlipHorizontal", description: "colorfull backpanted magnetic glass" },
-      { icon: "Lightbulb", description: "hanging lights" },
-      { icon: "Activity", description: "zigzag hanging lights" },
-      { icon: "CheckSquare", description: "utilization of space" },
-    ],
-    configuration: [
-
-      { flat: "1100 sqft", carpet: "44 days" },
-    ],
-
-    galleryImages: [
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-1.jpg", alt: "mayuresh-1" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-3.jpg", alt: "mayuresh-3" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-5.jpg", alt: "mayuresh-5" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-6.jpg", alt: "mayuresh-6" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-7.jpg", alt: "mayuresh-7" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-8.jpg", alt: "mayuresh-8" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-10.jpg", alt: "mayuresh-10" },
-      { image: "/images/projects/MAYURESHPLANET/mayuresh-11.jpg", alt: "mayuresh-11" },
-    ],
-  },
-  {
-    slug: "project-6",
-    title: "ADMIN AND HR OFFICE OF TATA POWER SOLAR AT, BENGALURU",
-    image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-14.png",
-    description: "ADMIN AND HR OFFICE OF TATA POWER SOLAR AT BANGALORE",
-    fullDescription:
-      "The new Admin and HR office for Tata Power Solar in Bangalore combines functionality with modern design elements to create an inspiring workspace. The 15,000-square-foot office features a sleek powder-coated open cell ceiling in the passage areas, giving the space a contemporary, open feel. Soft fabric lighting adds warmth, complementing the functional yet stylish open-close bookshelf design. Custom 3D lettering enhances branding throughout the space, while acoustic floats are strategically placed to ensure sound control and create a quiet, productive environment. This thoughtful layout, expected to be completed in 105 days, aims to foster a collaborative atmosphere in a visually appealing setting tailored to the needs of administrative and HR professionals.",
-    tagLine: "DEVELOPMENT OF FINANCES OFFICE SPACE AT TPSSL, BANGALARE",
-    highlights: [
-      { icon: "Home", description: "Powder coated open cell ceiling for passage area" },
-      { icon: "LampCeiling", description: "Fabric lights" },
-      { icon: "Library", description: "Open close book shelf" },
-      { icon: "FileCheck", description: "3D letter" },
-      { icon: "Layers2", description: "Acaustic floats" },
-    ],
-    configuration: [
-      { flat: "15000  sqft", carpet: "105 days" },
-    ],
-
-    galleryImages: [
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-2.jpg", alt: "tpsslBanglore-2" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-4.jpg", alt: "tpsslBanglore-4" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-7.jpg", alt: "tpsslBanglore-7" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-9.jpg", alt: "tpsslBanglore-9" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-11.jpg", alt: "tpsslBanglore-11" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-12.jpg", alt: "tpsslBanglore-12" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-14.png", alt: "tpsslBanglore-14" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-15.jpg", alt: "tpsslBanglore-15" },
-      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-17.jpg", alt: "tpsslBanglore-17" },
     ],
   },
   {
@@ -540,6 +284,262 @@ export const projects = [
       { image: "/images/projects/ATLANTAS/atlantas-7.jpg", alt: "atlantas-7" },
       { image: "/images/projects/ATLANTAS/atlantas-13.jpg", alt: "atlantas-13" },
       { image: "/images/projects/ATLANTAS/atlantas-18.jpg", alt: "atlantas-18" },
+    ],
+  },
+  {
+    slug: "project-16",
+    title: "THE JOKER BISTRO",
+    image: "/images/projects/JOCKER/jocker-8.png",
+    description: "NAVI MUMBAI,CBD-BELAPUR",
+    fullDescription:
+      "At Jocker Bistro every design element has been meticulously crafted by Supreme Infrastructure Company from the evocative brick storytelling wall to the bold lighting plush velvet booths and striking mosaic tabletops .This space isnt just built -its curated to bring the bistro vision to life as an immersive dining experience . LAYERED TEXTURES & CUSTOM DECOR PANELS - blending tactile surfaces with modern finishes to create depth and intrigue .GEOMETRIC LIGHTING & BOLD COLOR PALETTE -Featuring deep reds,charcoal greys ,and warm wooden tones for a rich ,moody atmosphere .STATEMENT WALLS - Showcasing motivational typography ,graphic murals and hand-painted art that spark conversation .CUSTOM SEATING LAYOUTS - thoughtfully arranged for inimate dining ,group gatherings and casual lounging .AMBIENT LIGHTING DESIGN - A combination of warm industrial pendants and sleek architectural downlights enhances the mood at every turn .SHOWSTOPPER BAR DESIGN - Elevated bottle displays, elegant finishes and functional design come together in a dramatic centerpiece.",
+    tagLine: "Atlanats Crew Management",
+    highlights: [
+      { icon: "Armchair", description: "Layered Textures" },
+      { icon: "PaintRoller", description: "Custom Decor Panels" },
+      { icon: "Fence", description: "Geometric Decor Panels" },
+      { icon: "LampWallUp", description: "Ambient Lighting Design" },
+      { icon: "Wine", description: "Showstopper Bar Design" },
+    ],
+    configuration: [
+      // { flat: "7500 sqft", carpet: "120 Days" },
+    ],
+
+    galleryImages: [
+      { image: "/images/projects/JOCKER/jocker-1.jpeg", alt: "jocker-1" },
+      { image: "/images/projects/JOCKER/jocker-2.jpeg", alt: "jocker-2" },
+      { image: "/images/projects/JOCKER/jocker-3.jpeg", alt: "jocker-3" },
+      { image: "/images/projects/JOCKER/jocker-4.jpeg", alt: "jocker-4" },
+      { image: "/images/projects/JOCKER/jocker-5.jpeg", alt: "jocker-5" },
+      { image: "/images/projects/JOCKER/jocker-6.jpeg", alt: "jocker-6" },
+      { image: "/images/projects/JOCKER/jocker-7.jpg", alt: "jocker-7" },
+      { image: "/images/projects/JOCKER/jocker-8.png", alt: "jocker-8" },
+    ],
+  },
+
+  {
+    slug: "project-15",
+    title: "OM LAXMI CONSOLIDATORS (OMLC)",
+    image: "/images/projects/OMLC/omlc-1.png",
+    description: "THE CORPORATE PARK,NAVI MUMBAI",
+    fullDescription:
+      "CONTEMPORARY WORKSPACE DESIGN -Sleek ,ergonomic layouts tailored for high productivity ,High-end white workstations paired with designer office chairs, Streamlined desk setups that promote collaboration and comfort. VIBRANT & INSPIRING AMBIENCE - Bold yellow and grey accent walls for a lively atmosphere Motivational wall quotes like creativity is intelligence having fun to inspire daily innovation ,Thoughtfully designed lighting for an uplifting environment . CUSTOM PARTITION DESIGN - A handcrafted partition using wood and acrylic ,Intricate patterned panels that blend aesthatic with functionality ,smartly divides space while keeping an open ,connected feel. SIGNATURE ELEMENTS - Artistic epoxy world map table a stunning custom centerpiece symbolizing global amition and creativity Geometric wall paneling a premium wood-texture backdrop adding depth and luxury to executive areas ,ambient shelving & decor integrated lighting and modern display units to enhance visual appeal .",
+    tagLine: "Atlanats Crew Management",
+    highlights: [
+      { icon: "TentTree", description: "Vibrant & Inspiring " },
+      { icon: "Columns3", description: "Custom Partition Design" },
+      { icon: "ComponentIcon", description: "Signature Elements" },
+      { icon: "LampWallUp", description: "Ambient Lighting" },
+      { icon: "LampWallDown", description: "Integrated Lighting" },
+    ],
+    configuration: [
+      // { flat: "7500 sqft", carpet: "120 Days" },
+    ],
+
+    galleryImages: [
+      { image: "/images/projects/OMLC/omlc-1.png", alt: "omlc-1" },
+      { image: "/images/projects/OMLC/omlc-2.jpeg", alt: "omlc-2" },
+      { image: "/images/projects/OMLC/omlc-3.jpeg", alt: "omlc-3" },
+      { image: "/images/projects/OMLC/omlc-4.jpeg", alt: "omlc-4" },
+      { image: "/images/projects/OMLC/omlc-5.jpeg", alt: "omlc-5" },
+      { image: "/images/projects/OMLC/omlc-6.jpeg", alt: "omlc-6" },
+      { image: "/images/projects/OMLC/omlc-7.jpeg", alt: "omlc-7" },
+      { image: "/images/projects/OMLC/omlc-8.jpeg", alt: "omlc-8" },
+      { image: "/images/projects/OMLC/omlc-9.png", alt: "omlc-9" },
+      { image: "/images/projects/OMLC/omlc-10.jpeg", alt: "omlc-10" },
+    ],
+  },
+  {
+    slug: "project-14",
+    title: "THE CORPORATE PARK , NAVI MUMBAI",
+    image: "/images/projects/TCP/tcp-2.jpeg",
+    description: "THE CORPORATE PARK ,NAVI MUMBAI",
+    fullDescription:
+      "The modern office space is designed with a perfect blend of aesthetics and functionality. The artwork wall with a decorative decal sticker enhances the ambiance, creating a visually appealing atmosphere. A dedicated display area with an artifact section adds sophistication and showcases achievements. The ceiling with a highlighted groove finish brings depth and style to the space. The TV unit with a display section provides an efficient setup for presentations and meetings. Additionally, the ledge sitting with table support offers a comfortable yet productive work environment, seamlessly combining innovation and practicality for an inspiring workplace experience.",
+    highlights: [
+      { icon: "Palette", description: "Modern & Contemporary Design" },
+      { icon: "Brush", description: "Custom Wall Accents & Branding" },
+      { icon: "Box", description: "Efficient Space Utilization" },
+      { icon: "Lightbulb", description: "Ambient & Task Lighting" },
+      { icon: "Diamond", description: "High-Quality Materials & Finishes" },
+    ],
+    configuration: [
+      { flat: " 2000 sqft", carpet: "60 days" },
+    ],
+    videos: [
+      {
+        url: "/images/projects/TCP/tcp-video-4.mp4",
+        thumbnail: "/images/projects/TCP/tcp-2.jpeg",
+        title: "Office Overview"
+      },
+      {
+        url: "/images/projects/TCP/tcp-video-7.mp4",
+        thumbnail: "/images/projects/TCP/tcp-3.jpeg",
+        title: "cabin Overview"
+      }
+    ],
+
+    galleryImages: [
+      { image: "/images/projects/TCP/tcp-1.jpeg", alt: "tcp-1" },
+      { image: "/images/projects/TCP/tcp-2.jpeg", alt: "tcp-2" },
+      { image: "/images/projects/TCP/tcp-3.jpeg", alt: "tcp-3" },
+      { image: "/images/projects/TCP/tcp-4.jpeg", alt: "tcp-4" },
+      { image: "/images/projects/TCP/tcp-5.jpeg", alt: "tcp-5" },
+    ],
+  },
+  {
+    slug: "project-10",
+    title: "CONSTRUCTION OF NEW FACTORY & GARDEN LANDSCAPING AT ALLANA KHOPOLI , NAVI MUMBAI",
+    image: "/images/projects/ALLANA/allana-1.jpeg",
+    description: "CONSTRUCTION OF NEW FACTORY & GARDEN LANDSCAPING AT ALLANA KHOPOLI",
+    fullDescription:
+      "The Allana Factory and Garden Landscaping project in Khopoli is a comprehensive construction and landscaping initiative, covering 10,000 square feet and set for completion in 60 days. The G+4 story building boasts a striking glazed and ACP façade, providing a sleek, modern exterior that stands out. Surrounding the building, acres of carefully planned garden landscaping incorporate colorful plants and a variety of green shades, creating a vibrant, layered effect that complements the building’s architecture. Designed with aesthetics in mind, the landscaping brings visual harmony and a natural charm to the industrial setting, offering a balanced and inviting environment for employees and visitors alike.",
+    tagLine: "Project information",
+    highlights: [
+      { icon: "BrickWall", description: "G + 4 story building with glaze and acp facade" },
+      { icon: "Fence", description: "Acres of garden landscaping at building surrounding area " },
+      { icon: "Sprout", description: "Colorfull plants" },
+      { icon: "Leaf", description: "Different shade of greenrise" },
+      { icon: "LeafyGreen", description: "Aeshtatic way" },
+    ],
+    configuration: [
+      { flat: "10000 sqft", carpet: "60 days" },
+    ],
+    // Added video section
+    galleryImages: [
+      { image: "/images/projects/ALLANA/allana-5.jpeg", alt: "allana-5" },
+      { image: "/images/projects/ALLANA/allana-6.jpeg", alt: "allana-6" },
+      { image: "/images/projects/ALLANA/allana-7.jpeg", alt: "allana-7" },
+    ],
+  },
+  {
+    slug: "project-9",
+    title: "KARANJADE BOUNDARY WALL, FOUNDATIONS 220KV,GIS STATION, TOSHIBA , NAVI MUMBAI",
+    image: "/images/projects/TOSHIBAKARANJADE/toshiba-2.jpg",
+    description: "TATA POWER FIRE TANK",
+    fullDescription:
+      "At the Karanjade Boundary Wall project for the 220KV GIS Station by Toshiba, a comprehensive boundary development plan was implemented. The project encompassed a detailed 1.4 km boundary wall construction with strategic garden fencing that seamlessly integrated the surrounding landscaping area. Diverse plant selections were carefully curated to enhance the aesthetic appeal, featuring a vibrant palette of colorful botanical species. The thoughtfully designed landscape not only provides robust perimeter security but also creates an visually appealing green environment around the critical infrastructure. Precision in foundation work and strategic plant placement ensures both functional and aesthetic excellence, transforming the boundary wall from a mere structural element into an integrated, attractive landscape solution that complements the technical infrastructure of the GIS station.",
+    tagLine: "Project information",
+    highlights: [
+      { icon: "Wallpaper", description: "1.4 km Boundry Wall" },
+      { icon: "FlipHorizontal", description: "Garden fencing" },
+      { icon: "Component", description: "Surrounding Landscipping Area" },
+      { icon: "Fence", description: "Different Plants" },
+      { icon: "Armchair", description: "ColorFull Plants" },
+    ],
+    configuration: [
+      { flat: "8000 sqft", carpet: "45 days" },
+    ],
+    // Added video section
+    galleryImages: [
+      { image: "/images/projects/TOSHIBAKARANJADE/toshiba-2.jpg", alt: "toshiba-2" },
+      { image: "/images/projects/TOSHIBAKARANJADE/toshiba-3.jpg", alt: "toshiba-3" },
+      { image: "/images/projects/TOSHIBAKARANJADE/toshiba-5.jpg", alt: "toshiba-5" },
+
+    ],
+  },
+  {
+    slug: "project-8",
+    title: "FINANCE HEADQUARTER OF TATA POWER PENINSULA ,MUMBAI",
+    image: "/images/projects/PENINSULA/peninsula-3.jpeg",
+    description: "FINANCE HEADQUARTER OF TATA POWER PENINSULA",
+    fullDescription:
+      "The Finance Headquarters of Tata Power Peninsula spans 8,000 square feet and is set for transformation over 45 days into a sophisticated, functional workspace that reflects Tata Power’s values. Key design elements include tastefully highlighted walls with elegant wallpaper, roller blinds on the windows for adjustable natural light, and a luxurious CFO cabin designed with attention to detail. Decorative fluted panels add a touch of modern elegance, while customized furniture enhances the comfort and professionalism of the space. This project combines high-quality finishes with thoughtful layouts, creating an inviting environment that fosters productivity and aligns with Tata Power’s prestigious brand.",
+    tagLine: "Project information",
+    highlights: [
+      { icon: "Wallpaper", description: "Highlisting the walls with wallpaper" },
+      { icon: "FlipHorizontal", description: "windows with roller blinds" },
+      { icon: "Component", description: "designed luxurious cfo cabin" },
+      { icon: "Fence", description: "Decorative fluted panels customized with brought" },
+      { icon: "Armchair", description: "furniture" },
+    ],
+    configuration: [
+      { flat: "8000 sqft", carpet: "45 days" },
+    ],
+    // Added video section
+    videos: [
+      {
+        url: "/images/projects/PENINSULA/peninsulaVideo-1.mp4",
+        thumbnail: "/images/projects/PENINSULA/peninsula-2.jpeg",
+        title: "Office Overview"
+      },
+      {
+        url: "/images/projects/PENINSULA/peninsulaVideo-9.mp4",
+        thumbnail: "/images/projects/PENINSULA/peninsula-10.jpeg",
+        title: "Cabin Overview"
+      }
+    ],
+    galleryImages: [
+      { image: "/images/projects/PENINSULA/peninsula-1.jpeg", alt: "tata-1" },
+      { image: "/images/projects/PENINSULA/peninsula-2.jpeg", alt: "tata-2" },
+      { image: "/images/projects/PENINSULA/peninsula-3.jpeg", alt: "tata-3" },
+      { image: "/images/projects/PENINSULA/peninsula-4.jpeg", alt: "tata-4" },
+      { image: "/images/projects/PENINSULA/peninsula-6.jpeg", alt: "tata-6" },
+      { image: "/images/projects/PENINSULA/peninsula-7.jpeg", alt: "tata-7" },
+      { image: "/images/projects/PENINSULA/peninsula-10.jpeg", alt: "tata-10" },
+
+    ],
+  },
+  {
+    slug: "project-7",
+    title: "SUPREME INFRASTRUCTURE HEAD OFFICE AT MAYURESH PLANET BELAPUR ,NAVI MUMBAI",
+    image: "/images/projects/MAYURESHPLANET/landscape.jpg",
+    description: "DEVELOPMENT OF SUPREME INFRASTRUCTURE COMPANY OFFICE",
+    fullDescription:
+      "Spanning 1,100 square feet, the Supreme Infrastructure Head Office renovation at Mayuresh Planet, Belapur, is a model of space efficiency and contemporary design, completed in just 44 days. The office’s vibrant, functional atmosphere is achieved through a combination of striking decorative MS partitions and colorful back-painted magnetic glass, adding both utility and visual interest. Unique lighting elements, including zigzag hanging lights, lend character and warmth to the space, enhancing the modern aesthetic. Thoughtful space utilization ensures that every area is both purposeful and appealing, providing a stylish and efficient workspace that reflects the dynamic ethos of Supreme Infrastructure.",
+    tagLine: "DEVELOPMENT OF FINANCES OFFICE SPACE AT TPSSL, BANGOLARE",
+    highlights: [
+      { icon: "BetweenVerticalStart", description: "Decorative MS partition" },
+      { icon: "FlipHorizontal", description: "colorfull backpanted magnetic glass" },
+      { icon: "Lightbulb", description: "hanging lights" },
+      { icon: "Activity", description: "zigzag hanging lights" },
+      { icon: "CheckSquare", description: "utilization of space" },
+    ],
+    configuration: [
+
+      { flat: "1100 sqft", carpet: "44 days" },
+    ],
+
+    galleryImages: [
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-1.jpg", alt: "mayuresh-1" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-3.jpg", alt: "mayuresh-3" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-5.jpg", alt: "mayuresh-5" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-6.jpg", alt: "mayuresh-6" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-7.jpg", alt: "mayuresh-7" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-8.jpg", alt: "mayuresh-8" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-10.jpg", alt: "mayuresh-10" },
+      { image: "/images/projects/MAYURESHPLANET/mayuresh-11.jpg", alt: "mayuresh-11" },
+    ],
+  },
+  {
+    slug: "project-6",
+    title: "ADMIN AND HR OFFICE OF TATA POWER SOLAR AT, BENGALURU",
+    image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-14.png",
+    description: "ADMIN AND HR OFFICE OF TATA POWER SOLAR AT BANGALORE",
+    fullDescription:
+      "The new Admin and HR office for Tata Power Solar in Bangalore combines functionality with modern design elements to create an inspiring workspace. The 15,000-square-foot office features a sleek powder-coated open cell ceiling in the passage areas, giving the space a contemporary, open feel. Soft fabric lighting adds warmth, complementing the functional yet stylish open-close bookshelf design. Custom 3D lettering enhances branding throughout the space, while acoustic floats are strategically placed to ensure sound control and create a quiet, productive environment. This thoughtful layout, expected to be completed in 105 days, aims to foster a collaborative atmosphere in a visually appealing setting tailored to the needs of administrative and HR professionals.",
+    tagLine: "DEVELOPMENT OF FINANCES OFFICE SPACE AT TPSSL, BANGALARE",
+    highlights: [
+      { icon: "Home", description: "Powder coated open cell ceiling for passage area" },
+      { icon: "LampCeiling", description: "Fabric lights" },
+      { icon: "Library", description: "Open close book shelf" },
+      { icon: "FileCheck", description: "3D letter" },
+      { icon: "Layers2", description: "Acaustic floats" },
+    ],
+    configuration: [
+      { flat: "15000  sqft", carpet: "105 days" },
+    ],
+
+    galleryImages: [
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-2.jpg", alt: "tpsslBanglore-2" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-4.jpg", alt: "tpsslBanglore-4" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-7.jpg", alt: "tpsslBanglore-7" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-9.jpg", alt: "tpsslBanglore-9" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-11.jpg", alt: "tpsslBanglore-11" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-12.jpg", alt: "tpsslBanglore-12" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-14.png", alt: "tpsslBanglore-14" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-15.jpg", alt: "tpsslBanglore-15" },
+      { image: "/images/projects/TPSSLBANGOLARE/tpsslBanglore-17.jpg", alt: "tpsslBanglore-17" },
     ],
   },
 ];
