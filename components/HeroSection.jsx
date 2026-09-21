@@ -156,6 +156,7 @@ const HeroCarousel = () => {
       </div>
 
 
+
       {/* ================= MAIN CONTENT (left aligned, bottom-heavy) ================= */}
       <div className="relative z-30 flex h-full items-end px-6 pb-28 sm:px-10 sm:pb-32 lg:px-16 lg:pb-36">
         <div className="max-w-3xl">
