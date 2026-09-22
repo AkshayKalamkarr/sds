@@ -1,8 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
 import {
- CloudSunRainIcon, Timer, Sprout, SunSnow, Leaf, Trees, TreeDeciduous, ContactRound, ShieldMinus, Fence
-} from 'lucide-react';
+  CloudSunRainIcon,
+  Timer,
+  Sprout,
+  SunSnow,
+  Leaf,
+  Trees,
+  TreeDeciduous,
+  ContactRound,
+  ShieldMinus,
+  Fence,
+} from "lucide-react";
 import { projects } from "../../../../data/horticultureprojects";
 import Image from "next/image";
 import { useParams } from "next/navigation";
@@ -34,7 +43,16 @@ export default function ProjectPage() {
   };
 
   const highlightsIcon = {
-    CloudSunRainIcon, Timer, Sprout, SunSnow, Leaf, Trees, TreeDeciduous, ContactRound, ShieldMinus, Fence
+    CloudSunRainIcon,
+    Timer,
+    Sprout,
+    SunSnow,
+    Leaf,
+    Trees,
+    TreeDeciduous,
+    ContactRound,
+    ShieldMinus,
+    Fence,
   };
 
   return (
@@ -95,10 +113,16 @@ export default function ProjectPage() {
                     transition={{ duration: 0.5, delay: i * 0.1 }}
                     className="relative aspect-video rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition"
                   >
-                    <video className="w-full h-full object-cover" controls poster={video.thumbnail}>
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      poster={video.thumbnail}
+                    >
                       <source src={video.url} type="video/mp4" />
                     </video>
-                    <p className="mt-2 text-center text-gray-600">{video.title}</p>
+                    <p className="mt-2 text-center text-gray-600">
+                      {video.title}
+                    </p>
                   </motion.div>
                 ))}
               </div>
@@ -143,7 +167,9 @@ export default function ProjectPage() {
                     className="flex flex-col items-center p-6 bg-white/70 backdrop-blur-md rounded-xl shadow-md hover:shadow-lg transition"
                   >
                     {Icon && <Icon className="w-10 h-10 mb-3 text-amber-600" />}
-                    <p className="text-sm font-medium text-gray-700">{item.description}</p>
+                    <p className="text-sm font-medium text-gray-700">
+                      {item.description}
+                    </p>
                   </motion.div>
                 );
               })}
@@ -167,7 +193,10 @@ export default function ProjectPage() {
               </thead>
               <tbody>
                 {project.configuration.map((cfg, i) => (
-                  <tr key={i} className="border-b border-gray-200 hover:bg-amber-50 transition">
+                  <tr
+                    key={i}
+                    className="border-b border-gray-200 hover:bg-amber-50 transition"
+                  >
                     <td className="py-3 px-4 text-center">{cfg.flat}</td>
                     <td className="py-3 px-4 text-center">{cfg.carpet}</td>
                     <td className="py-3 px-4 text-center">
