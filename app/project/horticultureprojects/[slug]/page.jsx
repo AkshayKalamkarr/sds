@@ -19,6 +19,8 @@ import Link from "next/link";
 import ProjectNotFound from "@/components/ProjectNotFoundResidencial";
 import { motion } from "framer-motion";
 
+
+
 const getProjectBySlug = (slug) => {
   return projects.find((project) => project.slug === slug);
 };
