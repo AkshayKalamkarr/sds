@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import NavbarDemo from "@/components/Navbar";
 import { Analytics } from "@vercel/analytics/next"
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
