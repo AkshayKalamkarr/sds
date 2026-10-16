@@ -92,7 +92,7 @@ function Panel({ sheet, label, alt, src, className, priority }) {
     >
       <Link
         href="/services/servicesdashboard"
-        className="relative block h-full w-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24476E]"
+        className="relative block h-full w-full focus-visible:outline-offset-2 focus-visible:outline-[#24476E]"
         aria-label={`View ${label} projects`}
       >
         <Image
@@ -102,7 +102,7 @@ function Panel({ sheet, label, alt, src, className, priority }) {
           sizes="(max-width: 1024px) 100vw, 60vw"
           style={{ objectFit: 'cover' }}
           priority={priority}
-          className="scale-105 grayscale-[15%] transition-all duration-700 ease-out group-hover:scale-100 group-hover:grayscale-0"
+          className="scale-105 transition-all duration-700 ease-out group-hover:scale-100 group-hover:grayscale-0"
         />
 
         {/* Blueprint wash — fades on hover to reveal full color */}
@@ -111,14 +111,14 @@ function Panel({ sheet, label, alt, src, className, priority }) {
           aria-hidden="true"
         />
 
-        <span className="absolute left-3 top-3 font-[family-name:var(--font-mono)] text-[11px] tracking-[0.15em] text-[#E7E5DE]">
+        <span className="absolute left-3 top-3  text-[11px] tracking-[0.15em] text-[#E7E5DE]">
           {sheet}
         </span>
 
         <RegistrationMarks />
 
         <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 border-t border-[#E7E5DE]/25 bg-[#1B1B18]/70 px-4 py-3 backdrop-blur-[2px]">
-          <h3 className="font-[family-name:var(--font-display)] text-base font-medium text-[#E7E5DE] sm:text-lg">
+          <h3 className="text-base font-medium text-[#E7E5DE] sm:text-lg">
             {label}
           </h3>
           <svg
@@ -148,7 +148,7 @@ const Portfolio = () => {
       </h2>
 
       <motion.div
-        className="grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-12 lg:auto-rows-[15rem] lg:gap-6"
+        className="grid grid-cols-1 gap-4 sm:gap-5 lg:grid-cols-12 lg:gap-6"
         variants={shouldReduceMotion ? undefined : container}
         initial={shouldReduceMotion ? undefined : 'hidden'}
         whileInView={shouldReduceMotion ? undefined : 'visible'}
@@ -164,17 +164,17 @@ const Portfolio = () => {
           className="flex flex-col gap-6 border border-[#1B1B18]/15 bg-[#1B1B18] px-5 py-6 text-[#E7E5DE] sm:px-8 sm:py-8 lg:col-span-12 lg:flex-row lg:items-center lg:justify-between lg:px-10"
         >
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-8 lg:gap-10">
-            <span className="font-[family-name:var(--font-mono)] text-xs tracking-[0.2em] text-[#E7E5DE]/50">
+            <span className="text-xs tracking-[0.2em] text-[#E7E5DE]/50">
               SHEET 01&ndash;03
             </span>
-            <p className="max-w-md font-[family-name:var(--font-display)] text-xl font-medium leading-snug sm:text-2xl">
+            <p className="max-w-md  text-xl font-medium leading-snug sm:text-2xl">
               A portfolio built on scope, scale, and site.
             </p>
           </div>
 
           <Link
             href="/services/servicesdashboard"
-            className="group inline-flex w-fit items-center gap-2 border border-[#E7E5DE]/30 px-5 py-2.5 font-[family-name:var(--font-mono)] text-xs tracking-[0.15em] transition-colors duration-300 hover:border-[#C1440E] hover:text-[#C1440E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C1440E]"
+            className="group inline-flex w-fit items-center gap-2 border border-[#E7E5DE]/30 px-5 py-2.5  text-xs tracking-[0.15em] transition-colors duration-300 hover:border-[#C1440E] hover:text-[#C1440E] focus-visible:outline-offset-2 focus-visible:outline-[#C1440E]"
           >
             SEE ALL WORK
             <svg
