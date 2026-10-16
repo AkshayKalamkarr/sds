@@ -20,15 +20,15 @@ const mono = IBM_Plex_Mono({
 
 const PANELS = [
   {
-    sheet: 'A-101',
+    sheet: 'SHEET 01',
     label: 'Architectural Design',
     alt: 'Modern architectural building facade',
-    src: '/images/portfolio/architecture.jpg',
+    src: '/images/projects/TATAPOWERCOMPANYLIMITEDVERSOVA/3.png',
     className: 'lg:col-span-7 lg:row-span-2',
     priority: true,
   },
   {
-    sheet: 'I-102',
+    sheet: 'SHEET 02',
     label: 'Interior Design',
     alt: "Interior of Ae'o Ward Village",
     src: '/images/portfolio/interior.jpeg',
@@ -36,11 +36,12 @@ const PANELS = [
     priority: true,
   },
   {
-    sheet: 'C-103',
+    sheet: 'SHEET 03',
     label: 'Civil Construction',
     alt: 'Stadium civil construction project',
     src: '/images/portfolio/civil.jpg',
     className: 'lg:col-span-5 lg:row-span-1',
+    priority: false,
   },
 ];
 

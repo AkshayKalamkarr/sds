@@ -36,6 +36,30 @@ const IMAGES = [
   },
 ];
 
+/* Keyframes are bundled here so the component works even if globals.css
+   doesn't define them. Safe to remove if you already have them. */
+const KEYFRAMES = `
+@keyframes kenburns {
+  from { transform: scale(1); }
+  to   { transform: scale(1.08); }
+}
+@keyframes thumb-progress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+@keyframes carousel-progress {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+@keyframes logo-breathe {
+  0%, 100% { opacity: .85; transform: scale(1); }
+  50%      { opacity: 1;   transform: scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-anim, .hero-anim * { animation: none !important; transition-duration: 0.01ms !important; }
+}
+`;
+
 const HeroCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -91,9 +115,13 @@ const HeroCarousel = () => {
 
   return (
     <main
-      className="relative h-screen min-h-[640px] w-full overflow-hidden bg-black"
+      className="hero-anim relative min-h-[640px] w-full overflow-hidden bg-black"
+      style={{ height: "100svh" }}
       aria-label="Infrastructure projects carousel"
+      suppressHydrationWarning
     >
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: KEYFRAMES }} />
+
       {/* ================= BACKGROUND SLIDES (Ken Burns) ================= */}
       <div className="absolute inset-0">
         {IMAGES.map((image, index) => {
@@ -139,27 +167,49 @@ const HeroCarousel = () => {
         aria-hidden="true"
       />
 
-      {/* ================= LOGO ================= */}
+      {/* ================= LOGO (soft spotlight, no box) ================= */}
       <div
-        className={`absolute left-5 top-5 z-50 transition-all duration-700 sm:left-8 sm:top-8 lg:left-12 lg:top-10 ${
+        className={`absolute left-5 top-5 z-50 transition-all duration-700 sm:left-9 sm:top-7 lg:left-14 lg:top-9 ${
           isLoaded ? "translate-y-0 opacity-100" : "-translate-y-6 opacity-0"
         }`}
       >
-        <Image
-          src="/images/home/SDS.png"
-          alt="Company logo"
-          width={120}
-          height={120}
-          priority
-          className="h-14 w-14 object-contain drop-shadow-2xl sm:h-16 sm:w-16 lg:h-20 lg:w-20"
-        />
+        <div className="relative flex items-center justify-center p-3 sm:p-4 lg:p-5">
+          {/* Warm outer glow that matches the orange in the logo */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -inset-6 rounded-full blur-2xl sm:-inset-8"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(255,140,50,0.45) 0%, rgba(255,140,50,0.15) 45%, transparent 70%)",
+            }}
+          />
+
+          {/* Feathered white spotlight: no hard edge, so dark letters stand out */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 rounded-full"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.85) 38%, rgba(255,255,255,0.35) 62%, rgba(255,255,255,0) 78%)",
+              animation: "logo-breathe 4.5s ease-in-out infinite",
+            }}
+          />
+
+          <Image
+            src="/images/home/SDS.png"
+            alt="Company logo"
+            width={240}
+            height={160}
+            priority
+            className="relative h-12 w-[4.5rem] object-contain sm:h-16 sm:w-24 lg:h-20 lg:w-32"
+            style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.25))" }}
+          />
+        </div>
       </div>
 
-
-
       {/* ================= MAIN CONTENT (left aligned, bottom-heavy) ================= */}
-      <div className="relative z-30 flex h-full items-end px-6 pb-28 sm:px-10 sm:pb-32 lg:px-16 lg:pb-36">
-        <div className="max-w-3xl">
+      <div className="relative z-30 flex h-full items-end px-5 pb-24 sm:px-10 sm:pb-32 lg:px-16 lg:pb-36">
+        <div className="relative w-full max-w-3xl md:pr-44 lg:pr-0">
           {IMAGES.map((image, index) => {
             const isActive = index === currentIndex;
             return (
@@ -173,11 +223,11 @@ const HeroCarousel = () => {
               >
                 {/* Tag + counter row */}
                 <div
-                  className={`mb-5 flex items-center gap-4 transition-all delay-100 duration-700 ${
+                  className={`mb-4 flex flex-wrap items-center gap-3 transition-all delay-100 duration-700 sm:mb-5 sm:gap-4 ${
                     isActive ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
                   }`}
                 >
-                  <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-white backdrop-blur-md">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white backdrop-blur-md sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.25em]">
                     <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
                     {image.tag}
                   </span>
@@ -189,7 +239,7 @@ const HeroCarousel = () => {
 
                 {/* Title */}
                 <h1
-                  className={`text-5xl font-bold leading-[0.95] tracking-tight text-white drop-shadow-2xl transition-all delay-150 duration-700 sm:text-6xl md:text-7xl lg:text-8xl ${
+                  className={`break-words text-4xl font-bold leading-[1] tracking-tight text-white drop-shadow-2xl transition-all delay-150 duration-700 min-[400px]:text-5xl sm:text-6xl md:text-7xl lg:text-8xl ${
                     isActive ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                   }`}
                 >
@@ -198,17 +248,17 @@ const HeroCarousel = () => {
 
                 {/* Description + CTA */}
                 <div
-                  className={`mt-6 flex flex-wrap items-center gap-6 transition-all delay-200 duration-700 ${
+                  className={`mt-5 flex flex-col items-start gap-5 transition-all delay-200 duration-700 sm:mt-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6 ${
                     isActive ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
                   }`}
                 >
-                  <p className="max-w-md text-sm font-light leading-relaxed text-white/75 sm:text-base">
+                  <p className="max-w-md text-sm font-light leading-relaxed text-white/80 sm:text-base">
                     Civil Infrastructure • Horticulture • Construction — engineered
                     with precision, delivered with pride.
                   </p>
                   <button
                     type="button"
-                    className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-black transition-transform duration-300 hover:scale-105"
+                    className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition-transform duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 sm:px-6 sm:py-3"
                   >
                     View Project
                     <svg
@@ -216,6 +266,7 @@ const HeroCarousel = () => {
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
+                      aria-hidden="true"
                     >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -228,7 +279,7 @@ const HeroCarousel = () => {
       </div>
 
       {/* ================= VERTICAL THUMBNAIL RAIL (right side) ================= */}
-      <div className="absolute bottom-8 right-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 sm:right-8 lg:right-12 md:flex">
+      <div className="absolute right-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 sm:right-8 md:flex lg:right-12">
         {IMAGES.map((image, index) => {
           const isActive = index === currentIndex;
           return (
@@ -239,6 +290,7 @@ const HeroCarousel = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               aria-label={`Go to ${image.subtitle} slide`}
+              aria-current={isActive}
               className={`group relative overflow-hidden rounded-xl border transition-all duration-500 ${
                 isActive
                   ? "h-20 w-32 border-white/80 shadow-2xl"
@@ -276,12 +328,13 @@ const HeroCarousel = () => {
       </div>
 
       {/* ================= MOBILE DOTS (small screens only) ================= */}
-      <div className="absolute bottom-8 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 md:hidden">
+      <div className="absolute bottom-7 left-1/2 z-50 flex -translate-x-1/2 items-center gap-2 md:hidden">
         {IMAGES.map((image, index) => (
           <button
             key={image.id}
             type="button"
             aria-label={`Go to ${image.subtitle} slide`}
+            aria-current={index === currentIndex}
             onClick={() => goToSlide(index)}
             className={`h-2 rounded-full transition-all duration-500 ${
               index === currentIndex ? "w-8 bg-white" : "w-2 bg-white/40"
@@ -297,9 +350,9 @@ const HeroCarousel = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         aria-label="Previous slide"
-        className="group absolute left-4 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-3 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 active:scale-95 sm:left-6"
+        className="group absolute left-2 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-2 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white active:scale-95 sm:left-6 sm:p-3"
       >
-        <svg className="h-5 w-5 transition-transform duration-300 group-hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-0.5 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -310,9 +363,9 @@ const HeroCarousel = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         aria-label="Next slide"
-        className="group absolute right-4 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-3 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 active:scale-95 sm:right-6 md:right-40 lg:right-44"
+        className="group absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-2 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white active:scale-95 sm:right-6 sm:p-3 md:right-40 lg:right-44"
       >
-        <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 5l7 7-7 7" />
         </svg>
       </button>
