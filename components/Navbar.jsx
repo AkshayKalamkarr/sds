@@ -111,7 +111,7 @@ function Navbar({ className }) {
 
                         <MenuItem setActive={setActive} active={active} item="About">
                             <div className="flex flex-col space-y-4 text-sm">
-                                <HoveredLink href="/about/supremeInfrastructure">SDS BHARAT INFRATECH</HoveredLink>
+                                <HoveredLink href="/about/sdsBharatInfratech">SDS BHARAT INFRATECH</HoveredLink>
                                 <HoveredLink href="/about/architecturalDesigns">Architectural Designs</HoveredLink>
                             </div>
                         </MenuItem>
@@ -213,7 +213,7 @@ function Navbar({ className }) {
                         isOpen={openDropdowns.about}
                         onClick={() => toggleDropdown('about')}
                     >
-                        <MobileMenuItem href="/about/supremeInfrastructure" onClick={closeMenu}>
+                        <MobileMenuItem href="/about/sdsBharatInfratech" onClick={closeMenu}>
                             Supreme Infrastructure
                         </MobileMenuItem>
                         <MobileMenuItem href="/about/architecturalDesigns" onClick={closeMenu}>

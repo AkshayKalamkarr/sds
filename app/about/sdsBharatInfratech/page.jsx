@@ -175,7 +175,7 @@ const AboutUsPage = () => {
             ===================================================== */}
 
             <section
-                className="relative min-h-[720px] w-full bg-cover bg-center sm:min-h-[780px] lg:min-h-screen"
+                className="relative w-full bg-cover bg-center  lg:min-h-screen"
                 style={{
                     backgroundImage:
                         "url('/images/about/about.jpg')",
@@ -185,9 +185,9 @@ const AboutUsPage = () => {
                 <div className="absolute inset-0 bg-slate-950/75" />
 
                 {/* Decorative gradient */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/80" />
+                <div className="absolute inset-0 from-black/20 via-black/30 to-black/80" />
 
-                <div className="relative z-10 flex min-h-[720px] items-center justify-center px-5 py-24 sm:min-h-[780px] sm:px-8 lg:min-h-screen">
+                <div className="relative z-10 flex  items-center justify-center px-5 py-24 sm:px-8 lg:min-h-screen">
                     <div className="mx-auto w-full max-w-6xl text-center">
                         <motion.div
                             initial={{
@@ -269,7 +269,7 @@ const AboutUsPage = () => {
                         Scroll
                     </span>
 
-                    <div className="mt-3 h-10 w-px bg-gradient-to-b from-amber-400 to-transparent" />
+                    <div className="mt-3 h-10 w-px  from-amber-400 to-transparent" />
                 </div>
             </section>
 
@@ -339,7 +339,7 @@ const AboutUsPage = () => {
                             className="relative"
                         >
                             <div className="rounded-[28px] bg-slate-950 p-2 shadow-2xl">
-                                <div className="rounded-[22px] border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 p-6 sm:p-8 md:p-10">
+                                <div className="rounded-[22px] border border-white/10  from-slate-900 via-slate-800 to-slate-950 p-6 sm:p-8 md:p-10">
 
                                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
 
@@ -443,7 +443,7 @@ const AboutUsPage = () => {
                     <div className="relative mx-auto mt-14 max-w-6xl md:mt-20">
 
                         {/* Desktop Center Line */}
-                        <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-amber-300 via-slate-300 to-amber-400 lg:block" />
+                        <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 from-amber-300 via-slate-300 to-amber-400 lg:block" />
 
                         <div className="space-y-8 sm:space-y-10 lg:space-y-14">
 
@@ -774,12 +774,12 @@ const AboutUsPage = () => {
                             className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_15px_45px_rgba(15,23,42,0.08)] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(15,23,42,0.14)]"
                         >
                             {/* Top accent */}
-                            <div className="absolute left-0 right-0 top-0 z-20 h-1.5 bg-gradient-to-r from-amber-400 via-amber-500 to-orange-500" />
+                            <div className="absolute left-0 right-0 top-0 z-20 h-1.5  from-amber-400 via-amber-500 to-orange-500" />
 
                             <div className="grid grid-cols-1 sm:grid-cols-[210px_1fr]">
 
                                 {/* Image */}
-                                <div className="relative h-[300px] overflow-hidden bg-slate-200 sm:h-full sm:min-h-[390px]">
+                                <div className="relative  overflow-hidden bg-slate-200 sm:h-full ">
                                     <Image
                                         src="/images/directors/unknown-man.jpg"
                                         alt="Lakshminarayanan Pillai"
@@ -789,7 +789,7 @@ const AboutUsPage = () => {
                                         sizes="(max-width: 640px) 100vw, 210px"
                                     />
 
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                                    <div className="absolute inset-0  from-slate-950/60 via-transparent to-transparent" />
 
                                     <div className="absolute bottom-5 left-5 rounded-full border border-white/30 bg-slate-950/70 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md sm:text-xs">
                                         Industry Experience
@@ -890,12 +890,12 @@ const AboutUsPage = () => {
                             className="group relative overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-[0_15px_45px_rgba(15,23,42,0.08)] transition-all duration-500 hover:shadow-[0_25px_60px_rgba(15,23,42,0.14)]"
                         >
                             {/* Top accent */}
-                            <div className="absolute left-0 right-0 top-0 z-20 h-1.5 bg-gradient-to-r from-slate-800 via-slate-700 to-amber-500" />
+                            <div className="absolute left-0 right-0 top-0 z-20 h-1.5  from-slate-800 via-slate-700 to-amber-500" />
 
                             <div className="grid grid-cols-1 sm:grid-cols-[210px_1fr]">
 
                                 {/* Image */}
-                                <div className="relative h-[300px] overflow-hidden bg-slate-300 sm:h-full sm:min-h-[390px]">
+                                <div className="relative  overflow-hidden bg-slate-300 sm:h-full ">
                                     <Image
                                         src="/images/directors/unknown-man.jpg"
                                         alt="Team Leadership"
@@ -904,7 +904,7 @@ const AboutUsPage = () => {
                                         sizes="(max-width: 640px) 100vw, 210px"
                                     />
 
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                                    <div className="absolute inset-0  from-slate-950/60 via-transparent to-transparent" />
 
                                     <div className="absolute bottom-5 left-5 rounded-full border border-white/30 bg-slate-950/70 px-4 py-2 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md sm:text-xs">
                                         Modern Approach
@@ -1084,7 +1084,7 @@ const AboutUsPage = () => {
             ===================================================== */}
 
             <section className="px-5 py-16 sm:px-8 md:py-20 lg:py-24">
-                <div className="mx-auto max-w-7xl overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800">
+                <div className="mx-auto max-w-7xl overflow-hidden from-slate-950 via-slate-900 to-slate-800">
 
                     <div className="px-5 py-12 sm:px-8 md:px-12 md:py-16 lg:px-16">
 
@@ -1250,7 +1250,7 @@ const AboutUsPage = () => {
                     transition={{
                         duration: shouldReduceMotion ? 0 : 0.7,
                     }}
-                    className="relative mx-auto max-w-5xl overflow-hidden rounded-[32px] bg-amber-500 px-6 py-14 text-center shadow-2xl sm:px-10 md:py-20"
+                    className="relative mx-auto max-w-5xl overflow-hidden bg-amber-500 px-6 py-14 text-center shadow-2xl sm:px-10 md:py-20"
                 >
                     {/* Decorations */}
                     <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-white/10" />

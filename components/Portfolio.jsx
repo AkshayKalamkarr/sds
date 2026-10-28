@@ -82,7 +82,7 @@ function Panel({
     >
       <Link
         href="/services/servicesdashboard"
-        className="relative block h-full w-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#24476E]"
+        className="relative block h-full w-full focus-visible:outline-offset-2 focus-visible:outline-[#24476E]"
         aria-label={`View ${label} projects`}
       >
         <Image
@@ -160,7 +160,7 @@ export default function Portfolio() {
 
           <Link
             href="/services/servicesdashboard"
-            className="group inline-flex w-fit items-center gap-2 border border-[#E7E5DE]/30 px-5 py-2.5 font-mono text-xs tracking-[0.15em] transition-colors duration-300 hover:border-[#C1440E] hover:text-[#C1440E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C1440E] motion-reduce:transition-none"
+            className="group inline-flex w-fit items-center gap-2 border border-[#E7E5DE]/30 px-5 py-2.5 font-mono text-xs tracking-[0.15em] transition-colors duration-300 hover:border-[#C1440E] hover:text-[#C1440E] focus-visible:outline-offset-2 focus-visible:outline-[#C1440E] motion-reduce:transition-none"
           >
             SEE ALL WORK
 
