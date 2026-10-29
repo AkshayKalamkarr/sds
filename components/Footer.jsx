@@ -18,10 +18,10 @@ import React from "react";
 
 const CONTACT = {
   phone: "+91 8591269664",
-  phoneHref: "tel:+918591269664",
+  phoneHref: "tel:+91 8591269664",
   whatsappHref: "https://wa.me/918591269664",
-  email: "contact@sdsbharatinfratech.in",
-  website: "www.sdsbharatinfratech.in",
+  email: "contact@sdsbharatinfratech.com",
+  website: "www.sdsbharatinfratech.com",
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=Mayuresh+Planet+Plot+42-43+Sector+15+Belapur+Navi+Mumbai",
 };
