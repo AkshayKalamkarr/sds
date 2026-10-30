@@ -222,7 +222,7 @@ export default function Contact() {
             backgroundImage: "url('/images/contact/contact-us-banner.jpeg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#171B1E]/95 via-[#171B1E]/80 to-[#171B1E]" />
+        <div className="absolute inset-0 from-[#171B1E]/95 via-[#171B1E]/80 to-[#171B1E]" />
         <div className="absolute inset-0 blueprint-grid" />
 
         <div className="relative h-full container mx-auto px-6 flex flex-col justify-center">
