@@ -225,7 +225,7 @@ const CareerPage = () => {
           Your browser does not support the video tag.
         </video>
 
-        <div className="absolute inset-0 bg-gradient-to-b from-[#171B1E]/70 via-transparent to-[#171B1E]" />
+        <div className="absolute inset-0  from-[#171B1E]/70 via-transparent to-[#171B1E]" />
         <div className="absolute inset-0 blueprint-grid opacity-70" />
 
         <div className="relative h-full container mx-auto px-6 flex flex-col justify-center">
@@ -328,13 +328,13 @@ const CareerPage = () => {
             <div className="relative border-2 border-[#1B1F23] p-2 bg-white lg:sticky lg:top-10">
               <CornerMarks color="#E8A33D" />
               <div
-                className="h-64 md:h-80 lg:h-[26rem] w-full bg-cover bg-center relative"
+                className="h-64 md:h-80  w-full bg-cover bg-center relative"
                 style={{
                   backgroundImage:
                     "url('/images/contact/careerBackground-2.jpg')",
                 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-[#171B1E]/85 via-[#171B1E]/10 to-transparent" />
+                <div className="absolute inset-0 from-[#171B1E]/85 via-[#171B1E]/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="font-mono text-[10px] tracking-[0.2em] text-[#E8A33D] mb-2">
                     ON SITE
