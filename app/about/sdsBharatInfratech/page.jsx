@@ -781,7 +781,7 @@ const AboutUsPage = () => {
                                 {/* Image */}
                                 <div className="relative  overflow-hidden bg-slate-200 sm:h-full ">
                                     <Image
-                                        src="/images/directors/unknown-man.jpg"
+                                        src="/images/directors/badeSir.jpeg"
                                         alt="Lakshminarayanan Pillai"
                                         fill
                                         priority
@@ -897,7 +897,7 @@ const AboutUsPage = () => {
                                 {/* Image */}
                                 <div className="relative  overflow-hidden bg-slate-300 sm:h-full ">
                                     <Image
-                                        src="/images/directors/unknown-man.jpg"
+                                        src="/images/directors/lakshmiSir.jpg"
                                         alt="Team Leadership"
                                         fill
                                         className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
