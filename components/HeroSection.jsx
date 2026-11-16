@@ -115,7 +115,7 @@ const HeroCarousel = () => {
 
   return (
     <main
-      className="hero-anim relative min-h-[640px] w-full overflow-hidden bg-black"
+      className="hero-anim relative w-full overflow-hidden bg-black"
       style={{ height: "100svh" }}
       aria-label="Infrastructure projects carousel"
       suppressHydrationWarning
@@ -129,7 +129,7 @@ const HeroCarousel = () => {
           return (
             <div
               key={image.id}
-              className={`absolute inset-0 transition-opacity duration-[1200ms] ease-out ${
+              className={`absolute inset-0 transition-opacity ease-out ${
                 isActive ? "z-10 opacity-100" : "z-0 opacity-0"
               }`}
               aria-hidden={!isActive}
@@ -150,8 +150,8 @@ const HeroCarousel = () => {
               </div>
 
               {/* Layered gradients for legibility */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/50" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/70" />
+              <div className="absolute inset-0 from-black/90 via-black/30 to-black/50" />
+              <div className="absolute inset-0 from-black/60 via-transparent to-black/70" />
             </div>
           );
         })}
@@ -201,7 +201,7 @@ const HeroCarousel = () => {
             width={240}
             height={160}
             priority
-            className="relative h-12 w-[4.5rem] object-contain sm:h-16 sm:w-24 lg:h-20 lg:w-32"
+            className="relative h-12 object-contain sm:h-16 sm:w-24 lg:h-20 lg:w-32"
             style={{ filter: "drop-shadow(0 1px 3px rgba(0,0,0,0.25))" }}
           />
         </div>
@@ -239,7 +239,7 @@ const HeroCarousel = () => {
 
                 {/* Title */}
                 <h1
-                  className={`break-words text-4xl font-bold leading-[1] tracking-tight text-white drop-shadow-2xl transition-all delay-150 duration-700 min-[400px]:text-5xl sm:text-6xl md:text-7xl lg:text-8xl ${
+                  className={`text-4xl font-boldleading-[1] tracking-tight text-white drop-shadow-2xl transition-all delay-150 duration-700 min-[400px]:text-5xl sm:text-6xl md:text-7xl lg:text-8xl ${
                     isActive ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                   }`}
                 >
@@ -258,7 +258,7 @@ const HeroCarousel = () => {
                   </p>
                   <button
                     type="button"
-                    className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition-transform duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 sm:px-6 sm:py-3"
+                    className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black transition-transform duration-300 hover:scale-105 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 sm:px-6 sm:py-3"
                   >
                     View Project
                     <svg
@@ -312,7 +312,7 @@ const HeroCarousel = () => {
               {isActive && (
                 <span
                   key={progressKey}
-                  className="absolute bottom-0 left-0 h-[3px] bg-white"
+                  className="absolute bottom-0 left-0 bg-white"
                   style={{
                     animation: `thumb-progress ${SLIDE_DURATION}ms linear`,
                     animationPlayState: isAutoPlaying ? "running" : "paused",
@@ -350,7 +350,7 @@ const HeroCarousel = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         aria-label="Previous slide"
-        className="group absolute left-2 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-2 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white active:scale-95 sm:left-6 sm:p-3"
+        className="group absolute left-2 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-2 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 focus-visible:outline-white active:scale-95 sm:left-6 sm:p-3"
       >
         <svg className="h-4 w-4 transition-transform duration-300 group-hover:-translate-x-0.5 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M15 19l-7-7 7-7" />
@@ -363,7 +363,7 @@ const HeroCarousel = () => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         aria-label="Next slide"
-        className="group absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-2 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white active:scale-95 sm:right-6 sm:p-3 md:right-40 lg:right-44"
+        className="group absolute right-2 top-1/2 z-50 -translate-y-1/2 rounded-full border border-white/20 bg-black/20 p-2 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-white/15 focus-visible:outline-white active:scale-95 sm:right-6 sm:p-3 md:right-40 lg:right-44"
       >
         <svg className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 sm:h-5 sm:w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 5l7 7-7 7" />
@@ -371,7 +371,7 @@ const HeroCarousel = () => {
       </button>
 
       {/* ================= TOP THIN PROGRESS BAR ================= */}
-      <div className="absolute left-0 top-0 z-50 h-[2px] w-full overflow-hidden bg-white/10">
+      <div className="absolute left-0 top-0 z-50h-[2px] w-full overflow-hidden bg-white/10">
         <div
           key={progressKey}
           className="h-full bg-white"
