@@ -81,7 +81,7 @@ function Navbar({ className }) {
                     <Link href="/" onClick={closeMenu} className="flex items-center gap-2">
                         <div className="relative h-10 w-28 sm:w-32">
                             <Image
-                                src="/images/home/SDS.png"
+                                src="/images/home/SDSLOGO.png"
                                 alt="Logo"
                                 fill
                                 sizes="(max-width: 640px) 112px, 128px"

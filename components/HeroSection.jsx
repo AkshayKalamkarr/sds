@@ -196,7 +196,7 @@ const HeroCarousel = () => {
           />
 
           <Image
-            src="/images/home/SDS.png"
+            src="/images/home/SDSLOGO.png"
             alt="Company logo"
             width={240}
             height={160}
