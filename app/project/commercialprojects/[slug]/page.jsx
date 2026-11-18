@@ -188,7 +188,7 @@ export default function ProjectPage() {
     : [];
 
   return (
-    <main className="min-h-screen w-full overflow-x-hidden bg-gradient-to-b from-amber-50 via-white to-white">
+    <main className="min-h-screen w-full overflow-x-hidden  from-amber-50 via-white to-white">
       <div className="w-full">
         {/* =========================================================
             HERO SECTION
@@ -242,7 +242,7 @@ export default function ProjectPage() {
             GALLERY
         ========================================================= */}
         {(videos.length > 0 || galleryImages.length > 0) && (
-          <section className="w-full bg-gradient-to-br from-gray-50 to-gray-100 px-4 py-12 sm:px-6 md:py-16 lg:px-16">
+          <section className="w-full  from-gray-50 to-gray-100 px-4 py-12 sm:px-6 md:py-16 lg:px-16">
             <div className="mx-auto w-full max-w-7xl">
               <h2 className="mb-8 text-center text-2xl font-bold text-orange-800 sm:text-3xl md:mb-10 md:text-4xl">
                 Gallery
@@ -384,7 +384,7 @@ export default function ProjectPage() {
                         delay: Math.min(index * 0.05, 0.4),
                       }}
                       whileHover={{ scale: 1.04 }}
-                      className="flex min-h-[150px] flex-col items-center justify-center rounded-xl bg-white/70 p-4 text-center shadow-md backdrop-blur-md transition hover:shadow-lg sm:min-h-[170px] sm:p-6"
+                      className="flex  flex-col items-center justify-center rounded-xl bg-white/70 p-4 text-center shadow-md backdrop-blur-md transition hover:shadow-lg sm:p-6"
                     >
                       {Icon && (
                         <Icon
@@ -409,7 +409,7 @@ export default function ProjectPage() {
         {/* =========================================================
             CONFIGURATION
         ========================================================= */}
-        <section className="w-full bg-gradient-to-r from-orange-50 to-amber-100 px-4 py-12 sm:px-6 md:py-16 lg:px-16">
+        <section className="w-full from-orange-50 to-amber-100 px-4 py-12 sm:px-6 md:py-16 lg:px-16">
           <div className="mx-auto w-full max-w-6xl">
             <h2 className="mb-8 text-center text-2xl font-bold text-orange-800 sm:text-3xl md:mb-10 md:text-4xl">
               Configuration
@@ -418,7 +418,7 @@ export default function ProjectPage() {
             {configuration.length > 0 ? (
               <div className="w-full overflow-hidden rounded-xl shadow-lg">
                 <div className="w-full overflow-x-auto">
-                  <table className="min-w-[600px] w-full border-collapse bg-white/90 backdrop-blur-md">
+                  <table className="w-full border-collapse bg-white/90 backdrop-blur-md">
                     <thead>
                       <tr className="bg-amber-700 text-xs text-white sm:text-sm md:text-base">
                         <th className="whitespace-nowrap px-4 py-3 text-center font-semibold">
@@ -461,7 +461,7 @@ export default function ProjectPage() {
                             <td className="px-4 py-4 text-center">
                               <Link
                                 href="/contact"
-                                className="inline-flex whitespace-nowrap rounded-lg bg-gradient-to-r from-amber-700 to-orange-700 px-4 py-2 text-xs font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg sm:px-5 sm:text-sm"
+                                className="inline-flex whitespace-nowrap rounded-lg from-amber-700 to-orange-700 px-4 py-2 text-xs font-semibold text-white shadow-md transition hover:scale-105 hover:shadow-lg sm:px-5 sm:text-sm"
                               >
                                 Get Quote
                               </Link>
@@ -489,7 +489,7 @@ export default function ProjectPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/90 p-3 sm:p-6"
+            className="fixed inset-0 flex items-center justify-center bg-black/90 p-3 sm:p-6"
             role="dialog"
             aria-modal="true"
             aria-label="Full image view"
