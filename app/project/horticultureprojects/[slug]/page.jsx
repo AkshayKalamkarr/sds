@@ -58,7 +58,7 @@ export default function ProjectPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-white">
+    <div className="min-h-screen from-amber-50 via-white to-white">
       <div className="w-full">
         {/* Hero */}
         <section className="py-12 px-6 lg:px-16">
@@ -98,7 +98,7 @@ export default function ProjectPage() {
 
         {/* Gallery */}
         {(project.galleryImages || project.videos) && (
-          <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-6 lg:px-16">
+          <section className=" from-gray-50 to-gray-100 py-16 px-6 lg:px-16">
             <h2 className="text-3xl md:text-4xl font-bold text-center text-orange-800 mb-10">
               Gallery
             </h2>
@@ -180,7 +180,7 @@ export default function ProjectPage() {
         )}
 
         {/* Config */}
-        <section className="bg-gradient-to-r from-orange-50 to-amber-100 py-16 px-6 lg:px-16">
+        <section className=" from-orange-50 to-amber-100 py-16 px-6 lg:px-16">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-orange-800 mb-10">
             Configuration
           </h2>
@@ -204,7 +204,7 @@ export default function ProjectPage() {
                     <td className="py-3 px-4 text-center">
                       <Link
                         href="/contact"
-                        className="inline-block bg-gradient-to-r from-amber-700 to-amber-700 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition"
+                        className="inline-block  from-amber-700 to-amber-700 text-white font-semibold py-2 px-5 rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition"
                       >
                         Get Quote
                       </Link>
