@@ -113,7 +113,7 @@ const VideoPlayer = React.memo(({ video }) => {
       )}
       {video.title && (
         <p
-          className={`${plexMono.variable} mt-2 text-center font-[family-name:var(--font-plex-mono)] text-[11px] uppercase tracking-wider text-[#7C8B6F]`}
+          className={`${plexMono.variable} mt-2 text-center  text-[11px] uppercase tracking-wider text-[#7C8B6F]`}
         >
           {video.title}
         </p>
@@ -154,7 +154,7 @@ const GalleryImage = React.memo(({ item, index, onClick }) => {
               onError={() => setError(true)}
             />
             <span
-              className={`${plexMono.variable} absolute bottom-2 left-2 bg-[#26332B]/80 px-1.5 py-0.5 font-[family-name:var(--font-plex-mono)] text-[9px] tracking-wider text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100`}
+              className={`${plexMono.variable} absolute bottom-2 left-2 bg-[#26332B]/80 px-1.5 py-0.5  text-[9px] tracking-wider text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100`}
             >
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -260,7 +260,7 @@ export default function ProjectPage() {
         <div className="flex flex-col items-center gap-12 md:mt-20 lg:flex-row">
           <div className="text-center lg:w-1/2 lg:text-left">
             <p className={`${STYLES.eyebrow} mb-4`}>Guest House — Stay</p>
-            <h1 className="mb-2 font-[family-name:var(--font-cormorant)] text-4xl font-semibold italic leading-tight text-[#26332B] md:text-6xl">
+            <h1 className="mb-2  text-4xl font-semibold italic leading-tight text-[#26332B] md:text-6xl">
               {project.title}
             </h1>
             <span className="mx-auto mb-6 block h-px w-20 bg-[#B8874A] lg:mx-0" />
@@ -270,7 +270,7 @@ export default function ProjectPage() {
           </div>
 
           <div className="relative cursor-pointer border border-[#DAD2BE] bg-white p-2 shadow-sm lg:w-1/2">
-            <div className="relative aspect-[4/3] w-full overflow-hidden">
+            <div className="relative  w-full overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -334,13 +334,13 @@ export default function ProjectPage() {
             <table className="w-full border-collapse bg-white shadow-sm">
               <thead>
                 <tr className="border-b-2 border-[#26332B] text-xs uppercase tracking-[0.15em] text-[#26332B] md:text-sm">
-                  <th className="px-4 py-3 font-[family-name:var(--font-plex-mono)] font-normal">
+                  <th className="px-4 py-3  font-normal">
                     Approx Area
                   </th>
-                  <th className="px-4 py-3 font-[family-name:var(--font-plex-mono)] font-normal">
+                  <th className="px-4 py-3  font-normal">
                     Project Duration
                   </th>
-                  <th className="px-4 py-3 font-[family-name:var(--font-plex-mono)] font-normal">
+                  <th className="px-4 py-3  font-normal">
                     Price
                   </th>
                 </tr>
