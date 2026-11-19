@@ -1,5 +1,34 @@
 export const projects = [
-  
+  {
+    slug: "project-18",
+    title: "REFURBISHMENT OF PROJECT SITE OFFICE FOR DHARAVI",
+    image: "/images/projects/DHARAVI/dharavi-2.jpg",
+    description: "MUMBAI, DHARAVI",
+    fullDescription:
+      "A modern and thoughtfully designed office space that combines functionality, aesthetics, and workplace comfort. The project features contemporary workstations, collaborative seating areas, private meeting spaces, and well-designed breakout zones to create an efficient and engaging working environment.",
+    tagLine: "Atlanats Crew Management",
+    highlights: [
+      { icon: "Armchair", description: "Efficient Space Planning" },
+      { icon: "Columns2", description: "Open & Collaborative Workstations" },
+      { icon: "Scale3D", description: "Premium Finishes & Flooring" },
+      { icon: "LampWallUp", description: "Glass Partitions & Concealed Services" },
+      { icon: "Timer", description: "Fast-Track 30-Day Execution" },
+    ],
+    configuration: [
+      { flat: "3500 sqft", carpet: "30 Days" },
+    ],
+
+    galleryImages: [
+      { image: "/images/projects/DHARAVI/dharavi-1.jpg", alt: "dharavi-1" },
+      { image: "/images/projects/DHARAVI/dharavi-2.jpg", alt: "dharavi-2" },
+      { image: "/images/projects/DHARAVI/dharavi-3.jpg", alt: "dharavi-3" },
+      { image: "/images/projects/DHARAVI/dharavi-4.jpg", alt: "dharavi-4" },
+      { image: "/images/projects/DHARAVI/dharavi-5.jpg", alt: "dharavi-5" },
+      { image: "/images/projects/DHARAVI/dharavi-6.jpg", alt: "dharavi-6" },
+      { image: "/images/projects/DHARAVI/dharavi-7.jpg", alt: "dharavi-7" },
+    ],
+  },
+
   {
     slug: "project-17",
     title: "IEL POWER HOUSE",
