@@ -1,7 +1,7 @@
 export const projects = [
   {
     slug: "project-18",
-    title: "REFURBISHMENT OF PROJECT SITE OFFICE FOR DHARAVI",
+    title: "TATA – DHARAVI SITE OFFICE REFURBISHMENT",
     image: "/images/projects/DHARAVI/dharavi-2.jpg",
     description: "MUMBAI, DHARAVI",
     fullDescription:
