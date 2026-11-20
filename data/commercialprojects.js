@@ -6,13 +6,13 @@ export const projects = [
     description: "MUMBAI, DHARAVI",
     fullDescription:
       "A modern and thoughtfully designed office space that combines functionality, aesthetics, and workplace comfort. The project features contemporary workstations, collaborative seating areas, private meeting spaces, and well-designed breakout zones to create an efficient and engaging working environment.",
-    tagLine: "Atlanats Crew Management",
+    tagLine: "TATA POWER - DHARAVI SITE OFFICE REFURBISHMENT",
     highlights: [
-      { icon: "Armchair", description: "Efficient Space Planning" },
-      { icon: "Columns2", description: "Open & Collaborative Workstations" },
-      { icon: "Scale3D", description: "Premium Finishes & Flooring" },
-      { icon: "LampWallUp", description: "Glass Partitions & Concealed Services" },
-      { icon: "Timer", description: "Fast-Track 30-Day Execution" },
+      { icon: "Armchair", description: "Contemporary Lounge Seating" },
+      { icon: "Columns2", description: "Elegant Glass Partitions" },
+      { icon: "Scale3D", description: "Optimized Workstations" },
+      { icon: "LampWallUp", description: "Modern Meeting Rooms" },
+      { icon: "Timer", description: "Integrated Lighting Design" },
     ],
     configuration: [
       { flat: "3500 sqft", carpet: "30 Days" },
