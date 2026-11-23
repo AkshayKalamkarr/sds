@@ -5,7 +5,7 @@ export const projects = [
     image: "/images/projects/DHARAVI/dharavi-2.jpg",
     description: "MUMBAI, DHARAVI",
     fullDescription:
-      "A modern and thoughtfully designed office space that combines functionality, aesthetics, and workplace comfort. The project features contemporary workstations, collaborative seating areas, private meeting spaces, and well-designed breakout zones to create an efficient and engaging working environment.",
+      "A Modern and thoughtfully designed office space that combines functionality, aesthetics, and workplace comfort. The project features contemporary workstations, collaborative seating areas, private meeting spaces, and well-designed breakout zones to create an efficient and engaging working environment.",
     tagLine: "TATA POWER - DHARAVI SITE OFFICE REFURBISHMENT",
     highlights: [
       { icon: "Armchair", description: "Contemporary Lounge Seating" },
@@ -15,7 +15,7 @@ export const projects = [
       { icon: "Timer", description: "Integrated Lighting Design" },
     ],
     configuration: [
-      { flat: "3500 sqft", carpet: "30 Days" },
+      { flat: "3500 sqft", carpet: "30 Days" },0
     ],
 
     galleryImages: [
