@@ -15,7 +15,7 @@ export const projects = [
       { icon: "Timer", description: "Integrated Lighting Design" },
     ],
     configuration: [
-      { flat: "3500 sqft", carpet: "30 Days" },0
+      { flat: "3500 sqft", carpet: "30 Days" }, 0
     ],
 
     galleryImages: [
