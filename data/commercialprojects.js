@@ -1,4 +1,5 @@
 export const projects = [
+  
   {
     slug: "project-18",
     title: "TATA POWER – DHARAVI SITE OFFICE REFURBISHMENT",
