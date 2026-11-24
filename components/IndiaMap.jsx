@@ -15,6 +15,7 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
 });
 
+
 const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
   weight: ["400", "600"],
